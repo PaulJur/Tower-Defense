@@ -1,21 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class goblinStats : MonoBehaviour
 {
+    public int goblinHealth;
 
-    public float goblinHealth = 5f;
-    public float currentGoblinHealth;
+    [SerializeField]
+    private int currentHealth;
+    public Slider HealthBar;
 
-    private void Start()
+
+    private void Update()
     {
-        currentGoblinHealth= goblinHealth;
+        
+        HealthBar.value = goblinHealth;
     }
 
-    public void goblinDamage(float damage)
+    private void Awake()
     {
-        currentGoblinHealth -= damage;
+        currentHealth = goblinHealth;
+    }
+
+    public void goblinDamage(int damage)
+    {
+        currentHealth -= damage;
 
     }
     

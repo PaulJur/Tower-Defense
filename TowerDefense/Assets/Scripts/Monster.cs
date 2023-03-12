@@ -3,25 +3,49 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public enum damageType
-{
-    Sharp,
-    Explosion,
-}
-
-
 public class Monster : MonoBehaviour
 {
-    private GameObject Prefab { get; set; }
-    private int Health { get; set; }
-    private Dictionary<damageType,int> Resistance { get; set; }
+    private string _name;
+    private int _health;
+    private int _speed;
+   // private int _armor;
  
-
-    public Monster(GameObject prefab,int health, Dictionary<damageType,int>resistance)
+    public string Name
     {
-        Prefab = prefab;
+        get { return _name; }
+        set
+        {
+            _name = value;
+        }
+    }
+    public int Health
+    {
+        get { return _health; }
+        set
+        {
+            _health = value;
+        }
+    }
+    public int Speed
+    {
+        get { return _speed; }
+        set
+        {
+            _speed = value;
+        }
+    }
+
+   // public int Armor
+   // {
+    //    get { return _armor; }
+   // }
+
+
+    public Monster(string name, int health, int speed)
+    {
+        Name= name;
         Health = health;
-        Resistance = resistance;
+        Speed = speed;
     }
     
 }

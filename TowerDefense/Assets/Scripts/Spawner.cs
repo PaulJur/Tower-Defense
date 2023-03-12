@@ -9,7 +9,7 @@ using UnityEngine.AI;
 
 public class Spawner : MonoBehaviour
 {
-    
+    #region variables
     [SerializeField]
     private GameObject[] enemies;//enemy array to spawn.
     [SerializeField]
@@ -29,12 +29,15 @@ public class Spawner : MonoBehaviour
     static public float roundDelay=10f;
 
     static public bool roundEnded;
-
+    #endregion
 
     public GameObject enemy;//prefab
 
+
+
     private void Start()
     {
+
         currentEnemies = enemiesToSpawn;
 
         StartCoroutine(roundSpawn());
@@ -56,7 +59,6 @@ public class Spawner : MonoBehaviour
             roundEnded = false;
 
         }
-        Debug.Log(currentEnemies);
     }
     
     IEnumerator roundSpawn()

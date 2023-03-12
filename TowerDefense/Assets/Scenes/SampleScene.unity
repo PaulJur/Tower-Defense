@@ -613,8 +613,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 804674872, guid: 9160b274f440a674daba6be4edf4a456, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 5917236273103280523, guid: 3179ab2947aea3048aad889fabd35cb7,
+        type: 3}
+    - target: {fileID: 804674872, guid: 9160b274f440a674daba6be4edf4a456, type: 3}
+      propertyPath: isFired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 804674872, guid: 9160b274f440a674daba6be4edf4a456, type: 3}
       propertyPath: fireRate
-      value: 0.8
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 804674872, guid: 9160b274f440a674daba6be4edf4a456, type: 3}
+      propertyPath: towerRange
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 804674872, guid: 9160b274f440a674daba6be4edf4a456, type: 3}
+      propertyPath: turretDamage
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5810227477612979884, guid: 9160b274f440a674daba6be4edf4a456,
         type: 3}
@@ -779,6 +796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 3383169929852734399, guid: 3179ab2947aea3048aad889fabd35cb7, type: 3}
+  - {fileID: 3383169929852734399, guid: e89aaaa40d79ad0448043fc698a686c3, type: 3}
   spawnLocation: {x: -111.19, y: 0, z: 582.2682}
   agent: {fileID: 7485287588139503897, guid: 3179ab2947aea3048aad889fabd35cb7, type: 3}
   moveLocation: {x: -73.8, y: 0, z: 33}
@@ -1929,7 +1947,7 @@ GameObject:
   - component: {fileID: 2061647421}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2062,7 +2080,7 @@ GameObject:
   - component: {fileID: 2066036218}
   - component: {fileID: 2066036217}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

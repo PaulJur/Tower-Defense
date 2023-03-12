@@ -20,7 +20,7 @@ public class turretTargeting : MonoBehaviour
     private float fireRate;
     private float nextFire;
     [SerializeField]
-    private float turretDamage;
+    private int turretDamage;
 
     public bool isFired;
     public GameObject closestEnemy;
@@ -29,6 +29,7 @@ public class turretTargeting : MonoBehaviour
     private void Start()
     {
         health = health.GetComponent<goblinStats>();
+        isFired = true;
     }
 
     void Update()
@@ -52,9 +53,9 @@ public class turretTargeting : MonoBehaviour
         }
         if (closestEnemy != null)
         {
+            
             if (Time.time > nextFire)
             {
-                isFired = true;
                 nextFire = Time.time + fireRate;
                 GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);
                 Vector3 direction = (closestEnemy.transform.position - transform.position).normalized;
@@ -65,14 +66,13 @@ public class turretTargeting : MonoBehaviour
         }
         if (isFired == true)
         {
-            isFired = false;
-            health.goblinDamage(5);
-            if (health.currentGoblinHealth <= 0)
+            health.goblinDamage(25);
+            if (health.goblinHealth <= 0)
         {
             Destroy(closestEnemy);
             Spawner.currentEnemies--;
         }
-            
+            //isFired = false;
         }
     }
     private void OnDrawGizmos()
