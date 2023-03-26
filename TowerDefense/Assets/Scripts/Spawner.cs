@@ -33,19 +33,21 @@ public class Spawner : MonoBehaviour
 
     public GameObject enemy;//prefab
 
-
+    private StockManager stock;
 
     private void Start()
     {
-
+        stock = GetComponent<StockManager>();
         currentEnemies = enemiesToSpawn;
 
         StartCoroutine(roundSpawn());
-        
-            
+        StartCoroutine(stockChangeTimer(1));
+
+
     }
     private void Update()
     {
+        
         //If the current enemies are 0 or lower and the round has ended
         //The script adds +1 to currentround, increase the enemy spawn count by the set amount
         //And sets the rest of the levels to 5seconds
@@ -55,10 +57,12 @@ public class Spawner : MonoBehaviour
             enemiesToSpawn += enemyIncrease;
             currentEnemies = enemiesToSpawn;
             roundDelay = 5f;
+            
             StartCoroutine(roundSpawn());
             roundEnded = false;
 
         }
+        
     }
     
     IEnumerator roundSpawn()
@@ -80,9 +84,25 @@ public class Spawner : MonoBehaviour
             agent = enemy.GetComponent<NavMeshAgent>();
             agent.SetDestination(moveLocation);
         }
-           
-            
+        
+    }
+    IEnumerator stockChangeTimer(int time)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(time);
+
+            stock.GnomeStock.changeStockPrice();
+            stock.GafStock.changeStockPrice();
+            stock.NahWeGoingUp.changeStockPrice();
+
+            float _gnomePrice = stock.GnomeStock.StockCurrentPrice;
+            float _gafStock = stock.GafStock.StockCurrentPrice;
+            float _NahWeGoingUp = stock.NahWeGoingUp.StockCurrentPrice;
+
+            yield return new WaitForSeconds(time);
+
+        }
     }
 
-  
 }

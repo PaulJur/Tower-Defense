@@ -5,27 +5,24 @@ using UnityEngine.UI;
 
 public class goblinStats : MonoBehaviour
 {
-    public int goblinHealth;
 
-    [SerializeField]
-    private int currentHealth;
+    private Monster Goblin;
+
     public Slider HealthBar;
 
+    private void Start()
+    {
+        Goblin = new Monster("Goblin", 100);
+    }
 
     private void Update()
     {
-        
-        HealthBar.value = goblinHealth;
-    }
-
-    private void Awake()
-    {
-        currentHealth = goblinHealth;
+        HealthBar.value = Goblin.Health;
     }
 
     public void goblinDamage(int damage)
     {
-        currentHealth -= damage;
+        Goblin.Health -= damage;
 
     }
     

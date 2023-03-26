@@ -6,9 +6,7 @@ using UnityEngine;
 
 public class turretTargeting : MonoBehaviour
 {
-    public goblinStats health;
-
-    Spawner spawn;
+    goblinStats stat;
 
     [SerializeField]
     private GameObject projectile;
@@ -28,7 +26,7 @@ public class turretTargeting : MonoBehaviour
 
     private void Start()
     {
-        health = health.GetComponent<goblinStats>();
+        //health = health.GetComponent<goblinStats>();
         isFired = true;
     }
 
@@ -64,16 +62,7 @@ public class turretTargeting : MonoBehaviour
             }
 
         }
-        if (isFired == true)
-        {
-            health.goblinDamage(25);
-            if (health.goblinHealth <= 0)
-        {
-            Destroy(closestEnemy);
-            Spawner.currentEnemies--;
-        }
-            //isFired = false;
-        }
+        
     }
     private void OnDrawGizmos()
     {
