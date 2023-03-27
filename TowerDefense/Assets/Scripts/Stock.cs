@@ -11,6 +11,9 @@ public class Stock
     private float _stockVolatility;
     private float _currentStockPrice;
     private string _stockName;
+    public static int _GafStockAmount;
+    public static int _GnomeStockAmount;
+    public static int _NahWeUpStockAmount;
 
     public Stock(float startingStockPrice, float volatility, string Name)
     {
@@ -75,6 +78,32 @@ public class Stock
         set
         {
             _currentStockPrice = value;
+        }
+    }
+
+    public int GafStockAmount
+    {
+        get { return _GafStockAmount; }
+        set
+        {
+            _GafStockAmount = value;
+        }
+    }
+    public  int GnomeStockAmount
+    {
+        get { return _GnomeStockAmount; }
+        set
+        {
+            _GnomeStockAmount = value;
+        }
+    }
+
+    public int NahWeUpStockAmount
+    {
+        get { return _NahWeUpStockAmount;}
+        set
+        {
+            _NahWeUpStockAmount = value;
         }
     }
 }

@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class uiText : MonoBehaviour
 {
-    Spawner spawn;
-    StockManager stock;
+    private Spawner spawn;
+    private StockManager stock;
+    private Gold gold;
+
     [SerializeField]
     private TextMeshProUGUI roundCount;
     [SerializeField]
@@ -20,11 +22,19 @@ public class uiText : MonoBehaviour
     private TextMeshProUGUI GnomeStockPrice;
     [SerializeField]
     private TextMeshProUGUI NahWeGoingUpPrice;
+    [SerializeField]
+    private TextMeshProUGUI GoldAmount;
+    [SerializeField]
+    private TextMeshProUGUI GafStockAmount;
 
     private void Start()
     {
         stock = GetComponent<StockManager>();
+        gold = GetComponent<Gold>();
+
     }
+
+
 
     void Update()
     {
@@ -39,6 +49,10 @@ public class uiText : MonoBehaviour
         GnomeStockPrice.text = $"Stock Name: {stock.GnomeStock.StockName} Current stock price: {stock.GnomeStock.StockCurrentPrice}";
 
         NahWeGoingUpPrice.text = $"Stock Name: {stock.NahWeGoingUp.StockName} Current stock price: {stock.NahWeGoingUp.StockCurrentPrice}";
+
+        GafStockAmount.text = $"GAF amount: {Stock._GafStockAmount}";
+
+        GoldAmount.text = $"Gold Amount: {gold.CurrentGoldAmount}";
 
 
 
