@@ -11,9 +11,9 @@ public class Stock
     private float _stockVolatility;
     private float _currentStockPrice;
     private string _stockName;
-    public static int _GafStockAmount;
-    public static int _GnomeStockAmount;
-    public static int _NahWeUpStockAmount;
+    private int _GafStockAmount;
+    private int _GnomeStockAmount;
+    private int _NahWeUpStockAmount;
 
     public Stock(float startingStockPrice, float volatility, string Name)
     {
@@ -36,7 +36,6 @@ public class Stock
         }else if(StockCurrentPrice > 100f) {
             StockCurrentPrice = 100f;
         }
-
     }
 
     public float randomNumber(float _number1, float _number2)
@@ -44,6 +43,8 @@ public class Stock
         float _randomNumber = Random.Range(_number1, _number2);
         return _randomNumber;
     }
+
+   
 
     public string StockName {
         get { return _stockName; }
@@ -53,7 +54,6 @@ public class Stock
         }
 
     }
-
     public float StockStartingPrice
     {
         get { return _startingStockPrice; }
@@ -80,7 +80,6 @@ public class Stock
             _currentStockPrice = value;
         }
     }
-
     public int GafStockAmount
     {
         get { return _GafStockAmount; }

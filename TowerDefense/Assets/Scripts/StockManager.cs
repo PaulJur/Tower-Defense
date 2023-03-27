@@ -16,30 +16,34 @@ public class StockManager : MonoBehaviour
         GnomeStock = new Stock(10f, 1f, "Gnome Stock");
         GafStock = new Stock(10f, 2f, "GAF Stock");
         NahWeGoingUp = new Stock(10f, 1.5f, "NahWeGoingUp Stock");
+
+        gold = GetComponent<Gold>();
+
     }
 
    public void BuyGafStock()
     {
-        
-        if (gold.CurrentGoldAmount < GafStock.StockCurrentPrice)//Fix this
+        if (gold.CurrentGoldAmount < GafStock.StockCurrentPrice)
         {
             Debug.Log("Not enough gold!");
         }
         else
         {
-            stock.GafStockAmount++;
+            GafStock.GafStockAmount++;
             gold.RemoveGold(GafStock.StockCurrentPrice);
         }
     }
 
     public void SellGafStock()
     {
-        gold.AddGold(GafStock.StockCurrentPrice);
-        stock.GafStockAmount--;
-
-        if (stock.GafStockAmount < 0)
+        if (GafStock.GafStockAmount < 0)
         {
             Debug.Log("You dont have any stock!");
+        }
+        else
+        {
+            GafStock.GafStockAmount--;
+            gold.AddGold(GafStock.StockCurrentPrice);
         }
     }
 

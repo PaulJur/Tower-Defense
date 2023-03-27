@@ -50,7 +50,7 @@ public class uiText : MonoBehaviour
 
         NahWeGoingUpPrice.text = $"Stock Name: {stock.NahWeGoingUp.StockName} Current stock price: {stock.NahWeGoingUp.StockCurrentPrice}";
 
-        GafStockAmount.text = $"GAF amount: {Stock._GafStockAmount}";
+        GafStockAmount.text = $"GAF amount: {stock.GafStock.GafStockAmount}";
 
         GoldAmount.text = $"Gold Amount: {gold.CurrentGoldAmount}";
 
