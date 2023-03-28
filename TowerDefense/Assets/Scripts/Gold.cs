@@ -31,5 +31,10 @@ public class Gold : MonoBehaviour
     public void RemoveGold(float amount)
     { 
         CurrentGoldAmount-= amount;
+
+        if(CurrentGoldAmount < 0)
+        {
+            CurrentGoldAmount = 0;
+        }
     }
 }

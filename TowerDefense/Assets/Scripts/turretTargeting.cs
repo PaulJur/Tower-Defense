@@ -11,7 +11,7 @@ public class turretTargeting : MonoBehaviour
     [SerializeField]
     private GameObject projectile;
     [SerializeField]
-    private float towerRange;
+    private int _towerRange;
     [SerializeField]
     private float projectileSpeed;
     [SerializeField]
@@ -32,7 +32,7 @@ public class turretTargeting : MonoBehaviour
 
     void Update()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, towerRange);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, _towerRange);
 
         float closestDistance = float.MaxValue;
 
@@ -61,13 +61,14 @@ public class turretTargeting : MonoBehaviour
 
             }
 
-        }
-        
+        }           
     }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, towerRange);
+        Gizmos.DrawWireSphere(transform.position, _towerRange);
     }
+
+    
 
 }

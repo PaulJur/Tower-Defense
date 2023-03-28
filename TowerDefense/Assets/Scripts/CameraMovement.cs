@@ -2,7 +2,7 @@
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
-public class Camera : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
     public float panSpeed = 20f;
     public float border = 10f;

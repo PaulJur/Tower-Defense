@@ -36,7 +36,7 @@ public class StockManager : MonoBehaviour
 
     public void SellGafStock()
     {
-        if (GafStock.GafStockAmount < 0)
+        if (GafStock.GafStockAmount <= 0)
         {
             Debug.Log("You dont have any stock!");
         }
