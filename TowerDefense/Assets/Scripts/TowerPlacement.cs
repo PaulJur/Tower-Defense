@@ -10,12 +10,15 @@ public class TowerPlacement : MonoBehaviour
     private LayerMask towerLayerMask;
     [SerializeField]
     private GameObject[] towerPrefab;
+    
 
     [SerializeField]
      GameObject TowerInstance;
 
     private int towerIndex;
     private bool beingPlaced = false;
+
+    public float towerCost;
 
     Gold gold;
 
@@ -43,7 +46,7 @@ public class TowerPlacement : MonoBehaviour
             {
                 Instantiate(towerPrefab[towerIndex], TowerInstance.transform.position, Quaternion.identity);
                 Destroy(TowerInstance);
-                gold.RemoveGold(50f);
+                gold.RemoveGold(0f);
                 TowerInstance = null;
                 
                 beingPlaced = false;
@@ -61,6 +64,7 @@ public class TowerPlacement : MonoBehaviour
         }
 
     }
+
     public void TowerToPlace (int index)
     {
         
@@ -72,11 +76,12 @@ public class TowerPlacement : MonoBehaviour
             Debug.Log("You already have a tower selected, press ESC to cancel");
             return;
         }
-        else if(gold.CurrentGoldAmount>=60)
+        else if(gold.CurrentGoldAmount>=towerCost)
         {
             
             TowerInstance = Instantiate(TowerBlueprintPrefab[towerIndex]);
             beingPlaced = true;
+            TowerGoldCost(towerCost);
 
         }
         else
@@ -85,5 +90,10 @@ public class TowerPlacement : MonoBehaviour
         }
 
 
+    }
+
+    public void TowerGoldCost(float amount)
+    {
+        gold.RemoveGold(amount);
     }
 }

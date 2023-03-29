@@ -16,16 +16,36 @@ public class uiText : MonoBehaviour
     private TextMeshProUGUI roundTimer;
     [SerializeField]
     private TextMeshProUGUI upcomingEnemies;
+
+    #region StockNames
     [SerializeField]
-    private TextMeshProUGUI GafStockPrice;
+    private TextMeshProUGUI GafStockName;
     [SerializeField]
-    private TextMeshProUGUI GnomeStockPrice;
+    private TextMeshProUGUI GnomeStockName;
     [SerializeField]
-    private TextMeshProUGUI NahWeGoingUpPrice;
+    private TextMeshProUGUI NahWeGoingUpName;
+    #endregion
+
     [SerializeField]
     private TextMeshProUGUI GoldAmount;
+
+    #region StockAmount
     [SerializeField]
     private TextMeshProUGUI GafStockAmount;
+    [SerializeField]
+    private TextMeshProUGUI GnomeStockAmount;
+    [SerializeField]
+    private TextMeshProUGUI NahWeGoingUpStockAmount;
+    #endregion
+
+    #region StockPrice
+    [SerializeField]
+    private TextMeshProUGUI GafPrice;
+    [SerializeField]
+    private TextMeshProUGUI GnomePrice;
+    [SerializeField]
+    private TextMeshProUGUI NahWeGoingUpPrice;
+    #endregion
 
     private void Start()
     {
@@ -38,25 +58,42 @@ public class uiText : MonoBehaviour
 
     void Update()
     {
+        #region otherText
         roundCount.text = "Current Round: " + Spawner.currentRound.ToString();
 
         roundTimer.text = "" + Spawner.roundDelay.ToString("f0");
 
         upcomingEnemies.text = "Upcoming Enemies: " + Spawner.currentEnemies.ToString();
 
-        GafStockPrice.text = $"Stock Name: {stock.GafStock.StockName} Current stock price: {stock.GafStock.StockCurrentPrice}";
-
-        GnomeStockPrice.text = $"Stock Name: {stock.GnomeStock.StockName} Current stock price: {stock.GnomeStock.StockCurrentPrice}";
-
-        NahWeGoingUpPrice.text = $"Stock Name: {stock.NahWeGoingUp.StockName} Current stock price: {stock.NahWeGoingUp.StockCurrentPrice}";
-
-        GafStockAmount.text = $"GAF amount: {stock.GafStock.GafStockAmount}";
-
         GoldAmount.text = $"Gold Amount: {gold.CurrentGoldAmount}";
 
+        #endregion
+        #region StockNames
+        GafStockName.text = $"Stock Name: {stock.GafStock.StockName}";
+
+        GnomeStockName.text = $"Stock Name: {stock.GnomeStock.StockName}";
+
+        NahWeGoingUpName.text = $"Stock Name: {stock.NahWeGoingUp.StockName}";
+        #endregion
+        #region StockAmount
+        GafStockAmount.text = $"GAF Stock: {stock.GafStock.GafStockAmount}";
+
+        GnomeStockAmount.text = $"Gnome Stock: {stock.GnomeStock.GnomeStockAmount}";
+
+        NahWeGoingUpStockAmount.text = $"WeUp Stock: {stock.NahWeGoingUp.NahWeUpStockAmount}";
+        #endregion
+        #region Stockprices
+        GafPrice.text = $"Price: {stock.GafStock.StockCurrentPrice}";
+
+        GnomePrice.text = $"Price: {stock.GnomeStock.StockCurrentPrice}";
+
+        NahWeGoingUpPrice.text = $"Price: {stock.NahWeGoingUp.StockCurrentPrice}";
+        #endregion
 
 
-        if (Spawner.roundDelay > 0)
+
+
+        if (Spawner.roundDelay > 0) //what is this lmao
         {
             Spawner.roundDelay-=Time.deltaTime;
         }
@@ -64,5 +101,7 @@ public class uiText : MonoBehaviour
         {
             Spawner.roundDelay = 0;
         }
+
+        
     }
 }

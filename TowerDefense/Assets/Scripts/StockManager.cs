@@ -15,7 +15,7 @@ public class StockManager : MonoBehaviour
     {
         GnomeStock = new Stock(10f, 1f, "Gnome Stock");
         GafStock = new Stock(10f, 2f, "GAF Stock");
-        NahWeGoingUp = new Stock(10f, 1.5f, "NahWeGoingUp Stock");
+        NahWeGoingUp = new Stock(10f, 1.5f, "WeUp Stock");
 
         gold = GetComponent<Gold>();
 
@@ -47,7 +47,7 @@ public class StockManager : MonoBehaviour
         }
     }
 
-    private void BuyGnomeStock()
+    public void BuyGnomeStock()
     {
         
         if (gold.CurrentGoldAmount < GnomeStock.StockCurrentPrice)
@@ -56,22 +56,50 @@ public class StockManager : MonoBehaviour
         }
         else
         {
-            stock.GnomeStockAmount++;
+            GnomeStock.GnomeStockAmount++;
             gold.RemoveGold(GnomeStock.StockCurrentPrice);
         }
     }
 
-    private void BuyStock()
+    public void SellGnomeStock()
     {
-        
+        if (GnomeStock.GnomeStockAmount <= 0)
+        {
+            Debug.Log("You dont have any stock!");
+        }
+        else
+        {
+            GnomeStock.GnomeStockAmount--;
+            gold.AddGold(GnomeStock.StockCurrentPrice);
+        }
+    }
+
+    public void BuyNahWeUpStock()
+    {
+
         if (gold.CurrentGoldAmount < NahWeGoingUp.StockCurrentPrice)
         {
             Debug.Log("Not enough gold!");
         }
         else
         {
-            stock.NahWeUpStockAmount++;
+            NahWeGoingUp.NahWeUpStockAmount++;
             gold.RemoveGold(NahWeGoingUp.StockCurrentPrice);
         }
     }
+
+    public void SellNahWeUpStock()
+    {
+        if (NahWeGoingUp.NahWeUpStockAmount <= 0)
+        {
+            Debug.Log("You dont have any stock!");
+        }
+        else
+        {
+            NahWeGoingUp.NahWeUpStockAmount--;
+            gold.AddGold(NahWeGoingUp.StockCurrentPrice);
+        }
+    }
+
+
 }
