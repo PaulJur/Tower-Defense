@@ -7,30 +7,22 @@ public class EmptyFarm : MonoBehaviour
     [SerializeField] private float growTimer=5;
     [SerializeField] private GameObject grownFarm;
 
-    private float growingTimer;
 
-    private void Update()
+    private void Start()
     {
-        growingTimer = Time.time;//To count seconds down for the timer
-
-        if (growingTimer >= growTimer)//timer for the farm to execute it's SpawnGrownFarm() code.
-        {
-            SpawnGrownFarm();
-        }
-
+        StartCoroutine(SpawnFarmGrown()); 
     }
 
-    private void SpawnGrownFarm()
+    IEnumerator SpawnFarmGrown()
     {
-        
-            Quaternion farmRotation = gameObject.transform.rotation; // gets the rotation of the empty farm so the farm with the crops doesn't spawn rotated by 180
-            Destroy(gameObject);//destroys current gameobject
+        yield return new WaitForSeconds(growTimer);
 
-            GameObject grownFarmPrefab = Instantiate(grownFarm, gameObject.transform.position, farmRotation);//spawns the farm with crops
-            growingTimer = 0;
-        
-        
-        
+        Quaternion farmRotation = gameObject.transform.rotation; // gets the rotation of the empty farm so the farm with the crops doesn't spawn rotated by 180
+
+        Destroy(gameObject);//destroys current gameobject
+        GameObject grownFarmPrefab = Instantiate(grownFarm, gameObject.transform.position, farmRotation);//spawns the farm with crops
+
+        yield return new WaitForSeconds(growTimer);
     }
 
 }

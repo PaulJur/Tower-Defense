@@ -10,15 +10,16 @@ public class TowerPlacement : MonoBehaviour
     private LayerMask towerLayerMask;
     [SerializeField]
     private GameObject[] towerPrefab;
-    
+    [SerializeField] private float[] towerCosts;
 
     [SerializeField]
      GameObject TowerInstance;
 
+
     private int towerIndex;
     private bool beingPlaced = false;
 
-    public float towerCost;
+    private float towerCost;
 
     Gold gold;
 
@@ -35,23 +36,28 @@ public class TowerPlacement : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, towerLayerMask))
+                {
+                    TowerInstance.transform.position = hit.point;
+                }
+
            
+                if (Input.GetMouseButtonDown(1))
+                {
+                    
+                    Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;
 
-                if (Physics.Raycast(ray, out hit,Mathf.Infinity,towerLayerMask)) 
-            {
-                TowerInstance.transform.position = hit.point;
-            }
+                    Instantiate(towerPrefab[towerIndex], TowerInstance.transform.position, towerRotation);
 
-            if (Input.GetMouseButtonDown(1))
-            {
-                Instantiate(towerPrefab[towerIndex], TowerInstance.transform.position, Quaternion.identity);
-                Destroy(TowerInstance);
-                gold.RemoveGold(0f);
-                TowerInstance = null;
-                
-                beingPlaced = false;
+                    Destroy(TowerInstance);
+                    gold.RemoveGold(towerCosts[towerIndex]); //removes gold from set tower costs for set towers in the inspector;
+                    TowerInstance = null;
 
-            }
+                    beingPlaced = false;
+
+                }
             
         }
 
@@ -69,6 +75,7 @@ public class TowerPlacement : MonoBehaviour
     {
         
         towerIndex = index;
+        
 
 
         if (beingPlaced)
@@ -78,10 +85,9 @@ public class TowerPlacement : MonoBehaviour
         }
         else if(gold.CurrentGoldAmount>=towerCost)
         {
-            
-            TowerInstance = Instantiate(TowerBlueprintPrefab[towerIndex]);
+            Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;
+            TowerInstance = Instantiate(TowerBlueprintPrefab[towerIndex],Input.mousePosition,towerRotation);
             beingPlaced = true;
-            TowerGoldCost(towerCost);
 
         }
         else
@@ -90,10 +96,5 @@ public class TowerPlacement : MonoBehaviour
         }
 
 
-    }
-
-    public void TowerGoldCost(float amount)
-    {
-        gold.RemoveGold(amount);
     }
 }

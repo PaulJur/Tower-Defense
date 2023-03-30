@@ -27,6 +27,7 @@ public class FarmWithCrops : MonoBehaviour
         if (isHarvastable)
         {
             gold.AddGold(15);//gives gold to the player
+            Instantiate(emptyFarmPrefab,gameObject.transform.position, farmRotation);
             Destroy(gameObject);
         }
 
