@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gold : MonoBehaviour
 {
-    private float _startingGold = 100;
+    [SerializeField] private float _startingGold = 100;
     private float _currentAmountOfGold;
 
 

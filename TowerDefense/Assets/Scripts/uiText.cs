@@ -63,7 +63,7 @@ public class uiText : MonoBehaviour
 
         roundTimer.text = "" + Spawner.roundDelay.ToString("f0");
 
-        upcomingEnemies.text = "Upcoming Enemies: " + Spawner.currentEnemies.ToString();
+        upcomingEnemies.text = "Upcoming Enemies: " + Spawner.enemiesToSpawn.ToString();
 
         GoldAmount.text = $"Gold Amount: {gold.CurrentGoldAmount}";
 

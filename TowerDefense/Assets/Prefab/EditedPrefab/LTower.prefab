@@ -9862,6 +9862,5 @@ MonoBehaviour:
   _towerRange: 300
   projectileSpeed: 300
   fireRate: 0.2
-  turretDamage: 0
-  isFired: 0
+  turretDamage: 15
   closestEnemy: {fileID: 0}

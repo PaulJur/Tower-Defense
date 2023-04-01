@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class turretTargeting : MonoBehaviour
 {
-    goblinStats stat;
 
     [SerializeField]
     private GameObject projectile;
@@ -20,16 +19,8 @@ public class turretTargeting : MonoBehaviour
     [SerializeField]
     private int turretDamage;
 
-    public bool isFired;
     public GameObject closestEnemy;
-
-
-    private void Start()
-    {
-        //health = health.GetComponent<goblinStats>();
-        isFired = true;
-    }
-
+ 
     void Update()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, _towerRange);
@@ -51,14 +42,19 @@ public class turretTargeting : MonoBehaviour
         }
         if (closestEnemy != null)
         {
-            
             if (Time.time > nextFire)
             {
                 nextFire = Time.time + fireRate;
-                GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);
-                Vector3 direction = (closestEnemy.transform.position - transform.position).normalized;
-                proj.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;
+                GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);//Creates a projectile at the tower
+                Vector3 direction = (closestEnemy.transform.position - transform.position).normalized;//Gets position of currentEnemy Gameobject and goes towards it
+                proj.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;//Sets the speed
 
+                Monsters enemyMonster = closestEnemy.GetComponent<Monsters>();//Grab the closestEnemy Monster component
+
+                if(enemyMonster != null)//If !closestenemy deal damage to it
+                {
+                    enemyMonster.TakeDamage(turretDamage);
+                }
             }
 
         }           

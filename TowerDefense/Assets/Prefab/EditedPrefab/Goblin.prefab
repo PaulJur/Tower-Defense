@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3383169929852734396}
   - component: {fileID: 7485287588139503897}
   - component: {fileID: 6975309664077202253}
-  - component: {fileID: 5917236273103280523}
+  - component: {fileID: 6966163717644437520}
   m_Layer: 7
   m_Name: Goblin
   m_TagString: Enemy
@@ -139,7 +139,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5917236273103280523
+--- !u!114 &6966163717644437520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,11 +148,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3383169929852734399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c214cdfce6e45a6499d68afe783fbdf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c893db1db6254741924b31254e6e3ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goblinHealth: 100
-  HealthBar: {fileID: 5974305667928207968}
+  _health: 100
+  _goldDrop: 10
+  gameManager: {fileID: 0}
+  hpSlider: {fileID: 5974305667928207968}
 --- !u!1 &4734460730753750142
 GameObject:
   m_ObjectHideFlags: 0

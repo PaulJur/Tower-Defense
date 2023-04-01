@@ -23,23 +23,23 @@ public class Spawner : MonoBehaviour
 
     static public int currentRound = 0+1;
     static public int currentEnemies;
-    [SerializeField]
-    private int enemiesToSpawn = 3;
+
+
+    static public int enemiesToSpawn = 3;
     private int enemyIncrease = 5;
     static public float roundDelay=10f;
 
     static public bool roundEnded;
     #endregion
 
-    public GameObject enemy;//prefab
 
     private StockManager stock;
+
 
     private void Start()
     {
         stock = GetComponent<StockManager>();
         currentEnemies = enemiesToSpawn;
-
         StartCoroutine(roundSpawn());
         StartCoroutine(stockChangeTimer(1));
 
@@ -47,7 +47,8 @@ public class Spawner : MonoBehaviour
     }
     private void Update()
     {
-        
+        Debug.Log(roundEnded);
+        Debug.Log(currentEnemies);
         //If the current enemies are 0 or lower and the round has ended
         //The script adds +1 to currentround, increase the enemy spawn count by the set amount
         //And sets the rest of the levels to 5seconds
@@ -77,12 +78,12 @@ public class Spawner : MonoBehaviour
         {
             int enemyIndex = Random.Range(0, enemies.Length);//randomizes what spawns during the round
          
-            yield return new WaitForSeconds(0.5f);
-            enemy = Instantiate(enemies[enemyIndex], randomPos, Quaternion.identity);//Instaniates current enemyIndex with the prefab array of enemies[] with the position of the Vector 3 randompos
-
+            GameObject enemy = Instantiate(enemies[enemyIndex], randomPos, Quaternion.identity);//Instaniates current enemyIndex with the prefab array of enemies[] with the position of the Vector 3 randompos
 
             agent = enemy.GetComponent<NavMeshAgent>();
             agent.SetDestination(moveLocation);
+
+            
         }
         
     }

@@ -8,7 +8,6 @@ public class endDelete : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Spawner spawn;
         if (other.gameObject.tag=="Enemy")
         {
             Destroy(other.gameObject);

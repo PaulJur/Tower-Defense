@@ -2385,12 +2385,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 3383169929852734399, guid: 3179ab2947aea3048aad889fabd35cb7, type: 3}
+  - {fileID: 3383169929852734399, guid: eb0dddb4643f825419a168cdf1d249c4, type: 3}
+  - {fileID: 3383169929852734399, guid: 3179ab2947aea3048aad889fabd35cb7, type: 3}
+  - {fileID: 3383169929852734399, guid: 3179ab2947aea3048aad889fabd35cb7, type: 3}
+  - {fileID: 3383169929852734399, guid: 3179ab2947aea3048aad889fabd35cb7, type: 3}
+  - {fileID: 3383169929852734399, guid: eb0dddb4643f825419a168cdf1d249c4, type: 3}
   spawnLocation: {x: -111.19, y: 0, z: 582.2682}
   agent: {fileID: 7485287588139503897, guid: 3179ab2947aea3048aad889fabd35cb7, type: 3}
   moveLocation: {x: -73.8, y: 0, z: 33}
   spawnRadius: 5
-  enemiesToSpawn: 1
-  enemy: {fileID: 3383169929852734399, guid: 3179ab2947aea3048aad889fabd35cb7, type: 3}
 --- !u!4 &928478528
 Transform:
   m_ObjectHideFlags: 0
@@ -2455,6 +2458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f2bdd76cc1d4b49b53ebeaa18b3a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startingGold: 1000000
 --- !u!114 &928478532
 MonoBehaviour:
   m_ObjectHideFlags: 0

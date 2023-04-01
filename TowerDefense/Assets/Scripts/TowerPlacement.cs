@@ -19,8 +19,6 @@ public class TowerPlacement : MonoBehaviour
     private int towerIndex;
     private bool beingPlaced = false;
 
-    private float towerCost;
-
     Gold gold;
 
     private void Start()
@@ -77,24 +75,26 @@ public class TowerPlacement : MonoBehaviour
         towerIndex = index;
         
 
-
         if (beingPlaced)
         {
             Debug.Log("You already have a tower selected, press ESC to cancel");
             return;
         }
-        else if(gold.CurrentGoldAmount>=towerCost)
-        {
-            Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;
-            TowerInstance = Instantiate(TowerBlueprintPrefab[towerIndex],Input.mousePosition,towerRotation);
-            beingPlaced = true;
 
+        if (towerCosts[towerIndex] > gold.CurrentGoldAmount)
+        {
+            Debug.Log("You don't have enough gold!");
         }
         else
         {
-            Debug.Log("not enough gold");
+            Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;
+            TowerInstance = Instantiate(TowerBlueprintPrefab[towerIndex], Input.mousePosition, towerRotation);
+            beingPlaced = true;
         }
 
+       
 
+
+        
     }
 }
