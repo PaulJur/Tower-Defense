@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class deleteProjectile : MonoBehaviour
 {
+    [SerializeField] private float ProjectileDeathTimer;
     private void Start()
     {
         StartCoroutine(DeleteProjectile());
@@ -21,7 +22,7 @@ public class deleteProjectile : MonoBehaviour
 
     IEnumerator DeleteProjectile()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(ProjectileDeathTimer);
         Destroy(gameObject);
     }
 
