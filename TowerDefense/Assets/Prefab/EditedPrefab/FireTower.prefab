@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 9158859806944604100, guid: caa13ce0f9b7e5a42b623052c2dd10db,
     type: 3}
-  _towerRange: 200
+  _towerRange: 0
   projectileSpeed: 150
   fireRate: 1.5
   turretDamage: 30

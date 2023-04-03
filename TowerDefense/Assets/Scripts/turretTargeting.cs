@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class turretTargeting : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class turretTargeting : MonoBehaviour
     private float nextFire;
     [SerializeField]
     private int turretDamage;
+    [SerializeField] private float slowSpeed;//THIS IS FOR SLOWING TOWER ONLY
 
     public GameObject closestEnemy;
  
@@ -40,12 +42,18 @@ public class turretTargeting : MonoBehaviour
                 }
             }
         }
+        if (closestEnemy != null && Vector3.Distance(transform.position, closestEnemy.transform.position) > _towerRange) //A check if the enemy has left the towers sphere, if it did it, the closestenemy becomes null
+        {
+            closestEnemy = null;
+        }
         if (closestEnemy != null)
         {
             if (Time.time > nextFire)
             {
                 nextFire = Time.time + fireRate;
+
                 GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);//Creates a projectile at the tower
+
                 Vector3 direction = (closestEnemy.transform.position - transform.position).normalized;//Gets position of currentEnemy Gameobject and goes towards it
                 proj.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;//Sets the speed
 
@@ -54,12 +62,16 @@ public class turretTargeting : MonoBehaviour
                 if(enemyMonster != null)//If !closestenemy deal damage to it
                 {
                     enemyMonster.TakeDamage(turretDamage);
+                    NavMeshAgent closestEnemyAgent = closestEnemy.GetComponent<NavMeshAgent>();
+                    closestEnemyAgent.speed *= slowSpeed;//THIS IS FOR SLOWING TOWER ONLY
                 }
+
+                
             }
 
-        }           
+        }        
     }
-    private void OnDrawGizmos()
+    private void OnDrawGizmos()//Draws the sphere around the tower. The player cannot see this
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _towerRange);
