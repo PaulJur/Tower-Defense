@@ -23,12 +23,12 @@ public class Gold : MonoBehaviour
         }
     }
 
-    public void AddGold(float amount)
+    public void AddGold(float amount)//Adds an amount of gold to the player
     {
         CurrentGoldAmount+= amount;
     }
 
-    public void RemoveGold(float amount)
+    public void RemoveGold(float amount)//Removes an amount of gold from the player.
     { 
         CurrentGoldAmount-= amount;
 

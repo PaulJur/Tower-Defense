@@ -4,11 +4,11 @@ using static UnityEditor.PlayerSettings;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float panSpeed = 20f;
-    public float border = 10f;
-    public Vector2 Limits;
+    [SerializeField] private float panSpeed = 20f;//How fast the camera moves
+    [SerializeField] private float border = 10f;
+    [SerializeField] private Vector2 Limits;
 
-    public float scrollSpeed;
+    [SerializeField] private float scrollSpeed;
 
     private float minY = 225f;
     private float maxY=450f;

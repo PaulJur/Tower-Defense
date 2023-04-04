@@ -430,7 +430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110.4, y: -92.9}
+  m_AnchoredPosition: {x: -117, y: -118.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82452714
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 238e745d95d7eb947879f33651f1c4e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d460cc73c06d874f83aba07d7ff4f5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 238e745d95d7eb947879f33651f1c4e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09ca1e20d1c2e214b835b365319bb017, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1705,7 +1705,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2403,7 +2403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &500208953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5213,7 +5213,7 @@ GameObject:
   - component: {fileID: 1305564835}
   - component: {fileID: 1305564834}
   m_Layer: 5
-  m_Name: ArrowTower
+  m_Name: BallistaTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5259,7 +5259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 238e745d95d7eb947879f33651f1c4e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5e6ea66621c7b44687cbf755e8513e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6283,7 +6283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 238e745d95d7eb947879f33651f1c4e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b204c77405580554182e0ce973a04800, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6479,7 +6479,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7140,11 +7140,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Portfender TD is a randomized wave spawner Tower defense. With that in
-    mind the basics of the game will include the main mechanics. Towers, enemy types,
-    stocks and farming.\n\nNow to begin we we will talk about the towers in the game.
-    There are currently 4 towers.\n\t\t     \n\t         \t      The Lightning tower\n\t        
-    \t      Does something something.\n\n"
+  m_text: "Portfender TD is a randomized wave spawner Tower defense. Your mission
+    is to defend your looted castle from the monsters that are trying to escape by
+    boat from your port! \nWith that in mind the basics of the game will include
+    the main mechanics. Towers, enemy types, stocks and farming.\n\nNow to begin
+    we we will talk about the towers in the game. There are currently 4 towers.\n\t\t    
+    \n\t         \t      The Lightning tower\n\t         \t      It shoots fast but
+    deals low damage.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa0200994f5a6e84689e64e9a3f56ac4, type: 2}
   m_sharedMaterial: {fileID: -6376118250862300242, guid: fa0200994f5a6e84689e64e9a3f56ac4,
@@ -7172,8 +7174,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7208,7 +7210,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -4.457281, z: 0, w: -36.045357}
+  m_margin: {x: 0, y: -31.37757, z: 0, w: -36.735176}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7286,7 +7288,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\t\t     The Ballista tower is what you call\n\t\t     \"Mediocre\", medium
+    damage, \n\t\t     medium fire rate etc.\n\n\t\t     The fire tower is a high
+    cost,\n\t\t     high damage tower that gets\n\t\t     the job done against big
+    guys.\n\n\t\t     The slow tower is the most \n\t\t     expensive tower for a
+    reason. It \n\t\t     slows and and it stacks!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa0200994f5a6e84689e64e9a3f56ac4, type: 2}
   m_sharedMaterial: {fileID: -6376118250862300242, guid: fa0200994f5a6e84689e64e9a3f56ac4,
@@ -7350,7 +7356,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -4.457281, z: 0, w: -36.045357}
+  m_margin: {x: 0, y: -13.917288, z: 0, w: -32.25982}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

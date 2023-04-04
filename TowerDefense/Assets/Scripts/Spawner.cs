@@ -80,18 +80,18 @@ public class Spawner : MonoBehaviour
          
             GameObject enemy = Instantiate(enemies[enemyIndex], randomPos, Quaternion.identity);//Instaniates current enemyIndex with the prefab array of enemies[] with the position of the Vector 3 randompos
 
-            agent = enemy.GetComponent<NavMeshAgent>();
-            agent.SetDestination(moveLocation);
+            agent = enemy.GetComponent<NavMeshAgent>();//Gets the enemies navmesh agent component
+            agent.SetDestination(moveLocation);//sets the agents destination to the moveLocation set in the inspector.
 
             
         }
         
     }
-    IEnumerator stockChangeTimer(int time)
+    IEnumerator stockChangeTimer(int time)//This is a timer for stocks to change and either decrease or increase in price
     {
         while (true)
         {
-            yield return new WaitForSeconds(time);
+            yield return new WaitForSeconds(time);//Waits for a certain period and changes the prices
 
             stock.GnomeStock.changeStockPrice();
             stock.GafStock.changeStockPrice();

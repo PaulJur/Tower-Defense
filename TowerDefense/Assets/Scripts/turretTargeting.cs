@@ -29,7 +29,7 @@ public class turretTargeting : MonoBehaviour
 
         float closestDistance = float.MaxValue;
 
-        foreach (Collider collider in colliders)//for every colllider that enters this OverlapSphere
+        foreach (Collider collider in colliders)//for every collider that enters this OverlapSphere
         {
             GameObject gameObject = collider.gameObject;
             if (gameObject.tag == "Enemy")//if an enemy object with the tag "Enemy" collider enters the sphere
@@ -42,10 +42,12 @@ public class turretTargeting : MonoBehaviour
                 }
             }
         }
+
         if (closestEnemy != null && Vector3.Distance(transform.position, closestEnemy.transform.position) > _towerRange) //A check if the enemy has left the towers sphere, if it did it, the closestenemy becomes null
         {
             closestEnemy = null;
         }
+
         if (closestEnemy != null)
         {
             if (Time.time > nextFire)

@@ -93,7 +93,7 @@ public class uiText : MonoBehaviour
 
 
 
-        if (Spawner.roundDelay > 0) //what is this lmao
+        if (Spawner.roundDelay > 0) //If round timer is above 0 countdown;
         {
             Spawner.roundDelay-=Time.deltaTime;
         }

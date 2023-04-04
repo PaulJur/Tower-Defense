@@ -19,9 +19,7 @@ public class FarmWithCrops : MonoBehaviour
     }
 
     private void OnMouseDown()//when the farm is pressed by the player with left click
-    {
-        
-
+    {  
         Quaternion farmRotation = gameObject.transform.rotation;//Get the farm rotation
 
         if (isHarvastable)
