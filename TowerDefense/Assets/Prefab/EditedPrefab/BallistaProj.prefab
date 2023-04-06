@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6128488137626314856}
   - component: {fileID: 5157164434271035363}
   - component: {fileID: 7489538049691970829}
-  - component: {fileID: 8140522418238442937}
   m_Layer: 0
   m_Name: BallistaProj
   m_TagString: Untagged
@@ -85,22 +84,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8140522418238442937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5663515316068057481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36a725a6b610a2a4180c6b9dbdef38f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 5663515316068057481, guid: c1fc4face39f3bb4c81c572f9f714a10,
-    type: 3}
-  _towerRange: 200
-  projectileSpeed: 250
-  fireRate: 0.5
-  turretDamage: 15
-  closestEnemy: {fileID: 0}

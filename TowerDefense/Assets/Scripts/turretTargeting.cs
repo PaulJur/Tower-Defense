@@ -20,6 +20,7 @@ public class turretTargeting : MonoBehaviour
     [SerializeField]
     private int turretDamage;
     [SerializeField] private float slowSpeed;//THIS IS FOR SLOWING TOWER ONLY
+    [SerializeField] private AudioSource shootingEffectSound;
 
     public GameObject closestEnemy;
  
@@ -61,11 +62,13 @@ public class turretTargeting : MonoBehaviour
 
                 Monsters enemyMonster = closestEnemy.GetComponent<Monsters>();//Grab the closestEnemy Monster component
 
+                shootingEffectSound.Play();
+
                 if(enemyMonster != null)//If !closestenemy deal damage to it
                 {
                     enemyMonster.TakeDamage(turretDamage);
                     NavMeshAgent closestEnemyAgent = closestEnemy.GetComponent<NavMeshAgent>();
-                    closestEnemyAgent.speed *= slowSpeed;//THIS IS FOR SLOWING TOWER ONLY
+                    closestEnemyAgent.speed *= slowSpeed;//THIS IS FOR SLOWING TOWER ONLY Default should be 1.
                 }
 
                 

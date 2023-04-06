@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5157164434271035363}
   - component: {fileID: 7489538049691970829}
   - component: {fileID: -4191907934733281212}
-  - component: {fileID: -6937547044578245521}
+  - component: {fileID: 8821812023521640789}
   m_Layer: 0
   m_Name: ShootProj
   m_TagString: Untagged
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d604c0faa404254b8a5d9e07c73e4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDeathTimer: 1
---- !u!54 &-6937547044578245521
+  ProjectileDeathTimer: 0
+--- !u!54 &8821812023521640789
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,9 +107,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5663515316068057481}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0001
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0

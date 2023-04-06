@@ -24,12 +24,11 @@ public class TowerPlacement : MonoBehaviour
     private void Start()
     {
         gold = GetComponent<Gold>();
+
     }
 
     private void Update()
     {
-        
-
         if (TowerInstance !=null && beingPlaced)//if the towerinstance is not null, execute the code below
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -39,15 +38,13 @@ public class TowerPlacement : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, towerLayerMask))
                 {
                     TowerInstance.transform.position = hit.point;
-                }
 
-           
-                if (Input.GetMouseButtonDown(1))
+                if (Input.GetMouseButtonDown(0))
                 {
-                    
+
                     Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;
 
-                    Instantiate(towerPrefab[towerIndex], TowerInstance.transform.position, towerRotation);
+                    Instantiate(towerPrefab[towerIndex], TowerInstance.transform.position, towerRotation);//Instantiates the tower from the index on mouse position of the TowerInstance and gets the rotatin from the prefab.
 
                     Destroy(TowerInstance);
                     gold.RemoveGold(towerCosts[towerIndex]); //removes gold from set tower costs for set towers in the inspector;
@@ -56,16 +53,20 @@ public class TowerPlacement : MonoBehaviour
                     beingPlaced = false;
 
                 }
-            
+            }
+            else { Debug.Log("Cannot place here"); }
+
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                Destroy(TowerInstance);
+                TowerInstance = null;
+                beingPlaced = false;
+
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Destroy(TowerInstance);
-            TowerInstance = null;
-            beingPlaced = false;
-            
-        }
+        
 
     }
 

@@ -47,8 +47,6 @@ public class Spawner : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(roundEnded);
-        Debug.Log(currentEnemies);
         //If the current enemies are 0 or lower and the round has ended
         //The script adds +1 to currentround, increase the enemy spawn count by the set amount
         //And sets the rest of the levels to 5seconds

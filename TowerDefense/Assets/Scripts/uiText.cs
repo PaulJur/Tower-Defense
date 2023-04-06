@@ -29,6 +29,8 @@ public class uiText : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI GoldAmount;
 
+    [SerializeField] AudioSource roundCountDownSound;
+
     #region StockAmount
     [SerializeField]
     private TextMeshProUGUI GafStockAmount;
@@ -96,6 +98,11 @@ public class uiText : MonoBehaviour
         if (Spawner.roundDelay > 0) //If round timer is above 0 countdown;
         {
             Spawner.roundDelay-=Time.deltaTime;
+
+            if (Spawner.roundDelay < 3 && !roundCountDownSound.isPlaying)
+            {
+                roundCountDownSound.Play();
+            }
         }
         else
         {
