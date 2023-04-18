@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
 
     static public int enemiesToSpawn = 3;
     private int enemyIncrease = 5;
-    static public float roundDelay=10f;
+    public float roundDelay=10f;
 
     static public bool roundEnded;
     #endregion
@@ -55,7 +55,6 @@ public class Spawner : MonoBehaviour
             currentRound++;
             enemiesToSpawn += enemyIncrease;
             currentEnemies = enemiesToSpawn;
-            roundDelay = 5f;
             
             StartCoroutine(roundSpawn());
             roundEnded = false;

@@ -7,6 +7,9 @@ using UnityEngine.AI;
 
 public class turretTargeting : MonoBehaviour
 {
+    [SerializeField] private GameObject SFXManager;
+    [SerializeField] private SFX sfx;
+    
 
     [SerializeField]
     private GameObject projectile;
@@ -19,13 +22,20 @@ public class turretTargeting : MonoBehaviour
     private float nextFire;
     [SerializeField]
     private int turretDamage;
-    [SerializeField] private float slowSpeed;//THIS IS FOR SLOWING TOWER ONLY
+    [SerializeField] private float slowSpeed;//THIS IS FOR SLOWING TOWER ONLY DEFAULT SHOULD BE 1
     [SerializeField] private AudioSource shootingEffectSound;
 
     public GameObject closestEnemy;
- 
+
+    private void Start()
+    {
+        SFXManager = GameObject.Find("SFXManager");
+        sfx = SFXManager.gameObject.GetComponent<SFX>();
+    }
+
     void Update()
     {
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, _towerRange);
 
         float closestDistance = float.MaxValue;
@@ -62,7 +72,9 @@ public class turretTargeting : MonoBehaviour
 
                 Monsters enemyMonster = closestEnemy.GetComponent<Monsters>();//Grab the closestEnemy Monster component
 
+                shootingEffectSound.volume = sfx.SFXSlider.value;
                 shootingEffectSound.Play();
+                
 
                 if(enemyMonster != null)//If !closestenemy deal damage to it
                 {

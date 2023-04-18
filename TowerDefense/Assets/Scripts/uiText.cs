@@ -53,6 +53,7 @@ public class uiText : MonoBehaviour
     {
         stock = GetComponent<StockManager>();
         gold = GetComponent<Gold>();
+        spawn = GetComponent<Spawner>();
 
     }
 
@@ -63,7 +64,7 @@ public class uiText : MonoBehaviour
         #region otherText
         roundCount.text = "Current Round: " + Spawner.currentRound.ToString();
 
-        roundTimer.text = "" + Spawner.roundDelay.ToString("f0");
+        roundTimer.text = "" + spawn.roundDelay.ToString("f0");
 
         upcomingEnemies.text = "Upcoming Enemies: " + Spawner.enemiesToSpawn.ToString();
 
@@ -95,18 +96,18 @@ public class uiText : MonoBehaviour
 
 
 
-        if (Spawner.roundDelay > 0) //If round timer is above 0 countdown;
+        if (spawn.roundDelay > 0) //If round timer is above 0 countdown;
         {
-            Spawner.roundDelay-=Time.deltaTime;
+            spawn.roundDelay-=Time.deltaTime;
 
-            if (Spawner.roundDelay < 3 && !roundCountDownSound.isPlaying)
+            if (spawn.roundDelay < 3 && !roundCountDownSound.isPlaying)
             {
                 roundCountDownSound.Play();
             }
         }
         else
         {
-            Spawner.roundDelay = 0;
+            spawn.roundDelay = 0;
         }
 
         

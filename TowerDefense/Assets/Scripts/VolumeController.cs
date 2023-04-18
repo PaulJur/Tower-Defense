@@ -9,31 +9,35 @@ public class VolumeController : MonoBehaviour
 {
 
     [SerializeField] private AudioSource Music;
-    [SerializeField] Slider volumeSlider;
+    [SerializeField] private Slider volumeSlider;
     [SerializeField] private TextMeshProUGUI volumeTextUI;
+
 
     private void Start()
     {
         LoadMusicValues();
     }
 
-    public void SetMusicVolume(float volume)//Text that shows at what value is the music currently at
+    public void SetMusicVolume(float volume)//Sets the numbers near the sliders to volume value.
     {
+        Music.volume = volume;
         volumeTextUI.text = volume.ToString("0.0");
     }
 
-    public void LoadMusicValues()//Loads music values on start so it essentially works on every scene
+    private void LoadMusicValues()//loads the volume according to value.
     {
         float MusicValue = PlayerPrefs.GetFloat("Volume");
         volumeSlider.value = MusicValue;
-        AudioListener.volume = MusicValue;
+        Music.volume = MusicValue;
     }
  
-    public void SaveVolume()//Saves values on press of button;
+    public void SaveVolume()//Button saves the value into a playerprefs.
     {
         float MusicValue = volumeSlider.value;
         PlayerPrefs.SetFloat("Volume", MusicValue);
-        LoadMusicValues();
+        LoadMusicValues();//When saved the value is loaded and the volume is adjusted.
     }
+
+   
 
 }

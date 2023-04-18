@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7783440282575557522}
   - component: {fileID: 7567479771376002831}
   - component: {fileID: 5930812191896282608}
-  - component: {fileID: 526983620}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Untagged
@@ -97,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a725a6b610a2a4180c6b9dbdef38f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SFXManager: {fileID: 0}
+  sfx: {fileID: 0}
   projectile: {fileID: 4915036184991736410, guid: 130d9bb3dbcd0344a8c443ca72f35a2e,
     type: 3}
   _towerRange: 100
@@ -104,21 +105,55 @@ MonoBehaviour:
   fireRate: 5
   turretDamage: 0
   slowSpeed: 0.8
-  shootingEffectSound: {fileID: 526983620}
+  shootingEffectSound: {fileID: 2843244274798303431}
   closestEnemy: {fileID: 0}
---- !u!82 &526983620
+--- !u!1 &6813686294200160292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6180279238542740126}
+  - component: {fileID: 2843244274798303431}
+  m_Layer: 0
+  m_Name: SlowingTower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6180279238542740126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813686294200160292}
+  m_LocalRotation: {x: 0, y: 0.6686051, z: 0, w: 0.74361765}
+  m_LocalPosition: {x: -74.9, y: 25.71608, z: 566.3}
+  m_LocalScale: {x: 2.8208, y: 2.8208, z: 2.8208}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4407843950016113466}
+  - {fileID: 3189494860742076393}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 83.919, z: 0}
+--- !u!82 &2843244274798303431
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3574282608413096605}
+  m_GameObject: {fileID: 6813686294200160292}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 515d887d1efe2da46b4c562d21398bd2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4c436fd3a981b7644ab178a2b817b7d8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.479
+  m_Volume: 0.78607637
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -202,39 +237,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &6813686294200160292
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6180279238542740126}
-  m_Layer: 0
-  m_Name: SlowingTower
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6180279238542740126
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6813686294200160292}
-  m_LocalRotation: {x: 0, y: 0.6686051, z: 0, w: 0.74361765}
-  m_LocalPosition: {x: -74.9, y: 25.71608, z: 566.3}
-  m_LocalScale: {x: 2.8208, y: 2.8208, z: 2.8208}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4407843950016113466}
-  - {fileID: 3189494860742076393}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 83.919, z: 0}
 --- !u!1 &7274319686350792970
 GameObject:
   m_ObjectHideFlags: 0
