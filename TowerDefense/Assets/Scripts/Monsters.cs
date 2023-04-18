@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Monsters : MonoBehaviour
 {
+    private Spawner spawner;
+
     [SerializeField]private int _health;
     [SerializeField]private int _goldDrop;
     private int currentHealth;
@@ -19,6 +21,7 @@ public class Monsters : MonoBehaviour
         currentHealth = _health;
         gameManager = GameObject.Find("GameManager");
         gold = gameManager.gameObject.GetComponent<Gold>();
+        spawner= gameManager.GetComponent<Spawner>();
 
     }
 
@@ -34,9 +37,9 @@ public class Monsters : MonoBehaviour
         {
             gold.AddGold(_goldDrop);
             Destroy(gameObject);
-            Spawner.currentEnemies--;
+            spawner.currentEnemies--;
         
-            if (Spawner.currentEnemies <= 0)
+            if (spawner.currentEnemies <= 0)
             {
                 Spawner.roundEnded = true;
             }

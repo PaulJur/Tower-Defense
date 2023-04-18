@@ -7,9 +7,11 @@ public class StockManager : MonoBehaviour
     private Stock stock;
     private Gold gold;
 
-    public Stock GnomeStock;
-    public Stock GafStock;
-    public Stock NahWeGoingUp;
+    private Stock _gnomeStock;
+    private Stock _gafStock;
+    private Stock _nahWeGoingUp;
+
+  
 
     void Start()
     {
@@ -101,5 +103,21 @@ public class StockManager : MonoBehaviour
         }
     }
 
+    public Stock GnomeStock
+    {
+        get { return _gnomeStock; }
+        private set { _gnomeStock = value; }
+    }
 
+    public Stock GafStock
+    {
+        get { return _gnomeStock; }
+        private set { _gnomeStock = value; }
+    }
+
+    public Stock NahWeGoingUp
+    {
+        get { return _gnomeStock; }
+        private set { _gnomeStock = value; }
+    }
 }

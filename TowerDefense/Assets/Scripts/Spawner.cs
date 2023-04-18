@@ -21,13 +21,16 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private float spawnRadius = 5f;
 
-    static public int currentRound = 0+1;
-    static public int currentEnemies;
+    private int _currentRound = 0+1;
+    private int _currentEnemies;
 
 
-    static public int enemiesToSpawn = 3;
+    private int _enemiesToSpawn = 3;
     private int enemyIncrease = 5;
-    public float roundDelay=10f;
+    private float _roundDelay = 10f;
+
+    [SerializeField] private AudioSource roundCountDownSound;
+    
 
     static public bool roundEnded;
     #endregion
@@ -35,6 +38,31 @@ public class Spawner : MonoBehaviour
 
     private StockManager stock;
 
+
+    public float roundDelay
+    {
+        get { return _roundDelay; }
+        private set { _roundDelay = value; }
+    }
+
+    public int enemiesToSpawn
+    {
+        get { return _enemiesToSpawn; }
+        private set { _enemiesToSpawn = value; }
+
+    }
+
+    public int currentEnemies
+    {
+        get { return _currentEnemies;}
+        set { _currentEnemies = value; }
+    }
+
+    public int currentRound
+    {
+        get { return _currentRound; }
+        private set { _currentRound = value; }
+    }
 
     private void Start()
     {
@@ -61,6 +89,20 @@ public class Spawner : MonoBehaviour
 
         }
         
+         if (roundDelay > 0) //If round timer is above 0 countdown;
+        {
+            roundDelay -= Time.deltaTime;
+
+            if (roundDelay < 3 && !roundCountDownSound.isPlaying)
+            {
+                roundCountDownSound.Play();
+            }
+        }
+        else
+        {
+            roundDelay = 0;
+        }
+
     }
     
     IEnumerator roundSpawn()
@@ -102,5 +144,6 @@ public class Spawner : MonoBehaviour
 
         }
     }
+
 
 }

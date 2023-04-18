@@ -10,12 +10,14 @@ public class uiText : MonoBehaviour
     private StockManager stock;
     private Gold gold;
 
-    [SerializeField]
-    private TextMeshProUGUI roundCount;
-    [SerializeField]
-    private TextMeshProUGUI roundTimer;
-    [SerializeField]
-    private TextMeshProUGUI upcomingEnemies;
+    [SerializeField] private TextMeshProUGUI roundCount;
+
+    [SerializeField] private TextMeshProUGUI roundTimer;
+
+    [SerializeField] private TextMeshProUGUI upcomingEnemies;
+
+    [SerializeField] private TextMeshProUGUI GoldAmount;
+
 
     #region StockNames
     [SerializeField]
@@ -25,11 +27,6 @@ public class uiText : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI NahWeGoingUpName;
     #endregion
-
-    [SerializeField]
-    private TextMeshProUGUI GoldAmount;
-
-    [SerializeField] AudioSource roundCountDownSound;
 
     #region StockAmount
     [SerializeField]
@@ -57,16 +54,14 @@ public class uiText : MonoBehaviour
 
     }
 
-
-
     void Update()
     {
         #region otherText
-        roundCount.text = "Current Round: " + Spawner.currentRound.ToString();
+        roundCount.text = "Current Round: " + spawn.currentRound.ToString();
 
         roundTimer.text = "" + spawn.roundDelay.ToString("f0");
 
-        upcomingEnemies.text = "Upcoming Enemies: " + Spawner.enemiesToSpawn.ToString();
+        upcomingEnemies.text = "Upcoming Enemies: " + spawn.enemiesToSpawn.ToString();
 
         GoldAmount.text = $"Gold Amount: {gold.CurrentGoldAmount}";
 
@@ -92,24 +87,6 @@ public class uiText : MonoBehaviour
 
         NahWeGoingUpPrice.text = $"Price: {stock.NahWeGoingUp.StockCurrentPrice}";
         #endregion
-
-
-
-
-        if (spawn.roundDelay > 0) //If round timer is above 0 countdown;
-        {
-            spawn.roundDelay-=Time.deltaTime;
-
-            if (spawn.roundDelay < 3 && !roundCountDownSound.isPlaying)
-            {
-                roundCountDownSound.Play();
-            }
-        }
-        else
-        {
-            spawn.roundDelay = 0;
-        }
-
         
     }
 }
