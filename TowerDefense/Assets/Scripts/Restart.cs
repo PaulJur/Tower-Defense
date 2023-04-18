@@ -7,7 +7,7 @@ public class Restart : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)){
+        if (Input.GetKeyDown(KeyCode.R)){//Restarts the scene and makes sure it is not paused
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Time.timeScale = 1;
         }
