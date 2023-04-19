@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class healRotation : MonoBehaviour
 {
-    [SerializeField]
+
     private GameObject sceneCamera;
 
     private void Awake()

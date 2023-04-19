@@ -9,23 +9,23 @@ public class endDelete : MonoBehaviour
 {
     private Lives lives;
     private Spawner spawner;
-    [SerializeField] private TextMeshProUGUI livesText;
+    [SerializeField] private TextMeshPro livesText;
     private GameObject GameManager;
 
     private void Update()
     {
-        livesText.text = $"Lives left: {Lives.currentLives}";
+        livesText.text = $"Lives left: {Lives.CurrentLives}";
     }
 
     private void Start()
     {
         GameManager = GameObject.Find("GameManager");
-        spawner = GameManager.gameObject.GetComponent<Spawner>();
+        spawner = GameManager.GetComponent<Spawner>();
         lives = GetComponent<Lives>();
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag=="Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
             Debug.Log("You lost a Life!");

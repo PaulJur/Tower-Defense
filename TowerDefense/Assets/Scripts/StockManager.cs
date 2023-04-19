@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class StockManager : MonoBehaviour
 {
-    private Stock stock;
     private Gold gold;
 
-    private Stock _gnomeStock;
-    private Stock _gafStock;
-    private Stock _nahWeGoingUp;
+    public Stock GnomeStock;
+    public Stock GafStock;
+    public Stock NahWeGoingUp;
 
   
 
@@ -101,23 +100,5 @@ public class StockManager : MonoBehaviour
             NahWeGoingUp.NahWeUpStockAmount--;
             gold.AddGold(NahWeGoingUp.StockCurrentPrice);
         }
-    }
-
-    public Stock GnomeStock
-    {
-        get { return _gnomeStock; }
-        private set { _gnomeStock = value; }
-    }
-
-    public Stock GafStock
-    {
-        get { return _gnomeStock; }
-        private set { _gnomeStock = value; }
-    }
-
-    public Stock NahWeGoingUp
-    {
-        get { return _gnomeStock; }
-        private set { _gnomeStock = value; }
     }
 }
