@@ -7,6 +7,7 @@ public class SelectTower : MonoBehaviour
 {
     [SerializeField] private GameObject SelectedTower;
     [SerializeField] private GameObject SellButton;
+    [SerializeField] private TextMeshProUGUI SellDescription;
     private Value towerValue;
     private Gold gold;
     private TowerPlacement placement;
@@ -21,9 +22,11 @@ public class SelectTower : MonoBehaviour
 
     private void Update()
     {
+        
         if (SelectedTower != null)
         {
             towerValue = SelectedTower.GetComponent<Value>();
+            SellDescription.text = $"Tower Sells for: {towerValue.TowerValue / 2}";
         }
         
         if (Input.GetMouseButtonDown(0) && !placement.BeingPlaced)//Checks if the mouse button is pressed and the player is currently not building
