@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 7706675970309241343}
   - component: {fileID: 5555027135401479477}
   - component: {fileID: 6282603505539803528}
+  - component: {fileID: 779641952}
+  - component: {fileID: 779641957}
   m_Layer: 0
   m_Name: FireTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,6 +183,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &779641952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203593928213359840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000012, y: 2.0000014, z: 5.139828}
+  m_Center: {x: -0.000000254358, y: -0.00000047711154, z: 2.5699139}
+--- !u!114 &779641957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203593928213359840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e617fd29e8a5a4194fa564225748ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towerValue: 100
 --- !u!1001 &7059822564876218390
 PrefabInstance:
   m_ObjectHideFlags: 0

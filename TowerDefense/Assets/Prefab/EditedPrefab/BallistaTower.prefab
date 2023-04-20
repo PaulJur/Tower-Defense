@@ -260,9 +260,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8405544594183787304}
   - component: {fileID: 4279079427777986522}
+  - component: {fileID: 2445382032540961610}
+  - component: {fileID: 10668915}
   m_Layer: 0
   m_Name: BallistaTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,6 +384,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &2445382032540961610
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9218216335475460498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.19, y: 5.64, z: 3.01}
+  m_Center: {x: 0, y: 2.94, z: 0}
+--- !u!114 &10668915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9218216335475460498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e617fd29e8a5a4194fa564225748ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towerValue: 100
 --- !u!1001 &7256354040233609500
 PrefabInstance:
   m_ObjectHideFlags: 0

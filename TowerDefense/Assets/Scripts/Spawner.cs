@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
 
     private int _enemiesToSpawn = 3;
     private int enemyIncrease = 5;
-    private float _roundDelay = 10f;
+    [SerializeField] private float _roundTimer;
 
     [SerializeField] private AudioSource roundCountDownSound;
     
@@ -38,13 +38,12 @@ public class Spawner : MonoBehaviour
 
     private StockManager stock;
 
-
-    public float roundDelay
+    public float RoundTimer
     {
-        get { return _roundDelay; }
-        private set { _roundDelay = value; }
-    }
+        get { return _roundTimer; }
+        private set { _roundTimer = value; }
 
+    }
     public int enemiesToSpawn
     {
         get { return _enemiesToSpawn; }
@@ -80,6 +79,7 @@ public class Spawner : MonoBehaviour
         //And sets the rest of the levels to 5seconds
         if (currentEnemies <= 0 && roundEnded == true)
         {
+            RoundTimer = 10;
             currentRound++;
             enemiesToSpawn += enemyIncrease;
             currentEnemies = enemiesToSpawn;
@@ -89,18 +89,18 @@ public class Spawner : MonoBehaviour
 
         }
         
-         if (roundDelay > 0) //If round timer is above 0 countdown;
+         if (RoundTimer > 0) //If round timer is above 0 countdown;
         {
-            roundDelay -= Time.deltaTime;
+            RoundTimer -= Time.deltaTime;
 
-            if (roundDelay < 3 && !roundCountDownSound.isPlaying)
+            if (RoundTimer < 3 && !roundCountDownSound.isPlaying)
             {
                 roundCountDownSound.Play();
             }
         }
         else
         {
-            roundDelay = 0;
+            RoundTimer = 0;
         }
 
     }
@@ -110,7 +110,7 @@ public class Spawner : MonoBehaviour
         //Creates a sphere on the current Vector3 that allows the enemies to spawn in the radius
         Vector3 randomPos = spawnLocation + Random.insideUnitSphere * spawnRadius;
 
-        yield return new WaitForSeconds(roundDelay);//waits for round delay amount to spawn enemies
+        yield return new WaitForSeconds(RoundTimer);//waits for round delay amount to spawn enemies
 
         //Loops trough all the currentEnemies variable
         for (int i = 0; i < currentEnemies; i++)

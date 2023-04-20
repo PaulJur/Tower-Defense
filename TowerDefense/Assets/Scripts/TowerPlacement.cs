@@ -10,7 +10,8 @@ public class TowerPlacement : MonoBehaviour
     private LayerMask towerLayerMask;
     [SerializeField]
     private GameObject[] towerPrefab;
-    [SerializeField] private float[] towerCosts;
+    [SerializeField] private float[] TowerCosts;
+
 
     [SerializeField]
      GameObject TowerInstance;
@@ -18,6 +19,11 @@ public class TowerPlacement : MonoBehaviour
 
     private int towerIndex;
     private bool beingPlaced = false;
+
+    public bool BeingPlaced
+    {
+        get { return beingPlaced; }
+    }
 
     Gold gold;
 
@@ -47,7 +53,7 @@ public class TowerPlacement : MonoBehaviour
                     Instantiate(towerPrefab[towerIndex], TowerInstance.transform.position, towerRotation);//Instantiates the tower from the index on mouse position of the TowerInstance and gets the rotatin from the prefab.
 
                     Destroy(TowerInstance);
-                    gold.RemoveGold(towerCosts[towerIndex]); //removes gold from set tower costs for set towers in the inspector;
+                    gold.RemoveGold(TowerCosts[towerIndex]); //removes gold from set tower costs for set towers in the inspector;
                     TowerInstance = null;
 
                     beingPlaced = false;
@@ -57,7 +63,7 @@ public class TowerPlacement : MonoBehaviour
             else { Debug.Log("Cannot place here"); }
 
 
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1))//Destroys the blueprint instance.
             {
                 Destroy(TowerInstance);
                 TowerInstance = null;
@@ -76,17 +82,17 @@ public class TowerPlacement : MonoBehaviour
         towerIndex = index;
         
 
-        if (beingPlaced)
+        if (beingPlaced)//Checks if the player is trying to press the tower button multiple times.
         {
             Debug.Log("You already have a tower selected, press ESC to cancel");
             return;
         }
 
-        if (towerCosts[towerIndex] > gold.CurrentGoldAmount)
+        if (TowerCosts[towerIndex] > gold.CurrentGoldAmount)//If the tower costs more than what the player has, it cannot be placed.
         {
             Debug.Log("You don't have enough gold!");
         }
-        else
+        else//Places the tower 
         {
             Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;
             TowerInstance = Instantiate(TowerBlueprintPrefab[towerIndex], Input.mousePosition, towerRotation);

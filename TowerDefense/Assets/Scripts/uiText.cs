@@ -59,7 +59,7 @@ public class uiText : MonoBehaviour
         #region otherText
         roundCount.text = "Current Round: " + spawn.currentRound.ToString();
 
-        roundTimer.text = "" + spawn.roundDelay.ToString("f0");
+        roundTimer.text = "" + spawn.RoundTimer.ToString("f0");
 
         upcomingEnemies.text = "Upcoming Enemies: " + spawn.enemiesToSpawn.ToString();
 
