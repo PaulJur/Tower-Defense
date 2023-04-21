@@ -675,7 +675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 238e745d95d7eb947879f33651f1c4e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3265821b5962350448ff0a5aae26e175, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1517,7 +1517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 238e745d95d7eb947879f33651f1c4e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09bfa6ae4d419af46879bc5fa030e696, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1569,7 +1569,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2367,7 +2367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &500208953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2641,7 +2641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.1, y: -91.8}
+  m_AnchoredPosition: {x: -10.4, y: -91.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543796714
@@ -3636,6 +3636,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SFXSlider
       objectReference: {fileID: 0}
+    - target: {fileID: 4139723918921027928, guid: 813f73df2acf18e42b08bc394d4598b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4139723918921027929, guid: 813f73df2acf18e42b08bc394d4598b8,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3789,12 +3794,12 @@ PrefabInstance:
     - target: {fileID: 4139723918953146774, guid: 813f73df2acf18e42b08bc394d4598b8,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4139723919788111854, guid: 813f73df2acf18e42b08bc394d4598b8,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 813f73df2acf18e42b08bc394d4598b8, type: 3}
@@ -4868,7 +4873,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 238e745d95d7eb947879f33651f1c4e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f01cf43c1642b64e81dd51d6509e052, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6819,7 +6824,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7150,7 +7155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 238e745d95d7eb947879f33651f1c4e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a840b46e17b9a924bb28acbac4122e49, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8022,14 +8027,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-
-    In Portfender TD you can also build farms with your towers as another
-    source of income, since they are a a constant profit generating building it''s
+  m_text: "\n\nIn Portfender TD you can also build farms with your towers as another
+    source of income, since they are a a constant profit generating building it's
     profit is low but consistent. The twist is that you have to press your farms
     to get your gold otherwise your efficiency in gold generating gets lower the
-    longer the farm is not working.'
+    longer the farm is not working. \nYou also cannot\nsell the farms!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa0200994f5a6e84689e64e9a3f56ac4, type: 2}
   m_sharedMaterial: {fileID: -6376118250862300242, guid: fa0200994f5a6e84689e64e9a3f56ac4,

@@ -25,8 +25,8 @@ public class Spawner : MonoBehaviour
     private int _currentEnemies;
 
 
-    private int _enemiesToSpawn = 3;
-    private int enemyIncrease = 5;
+    private int _enemiesToSpawn = 2;
+    private int enemyIncrease;
     [SerializeField] private float _roundTimer;
 
     [SerializeField] private AudioSource roundCountDownSound;
@@ -81,7 +81,7 @@ public class Spawner : MonoBehaviour
         {
             RoundTimer = 10;
             currentRound++;
-            enemiesToSpawn += enemyIncrease;
+            enemiesToSpawn += Randomization();
             currentEnemies = enemiesToSpawn;
             
             StartCoroutine(roundSpawn());
@@ -145,5 +145,10 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    private int Randomization()
+    {
+        int value = Random.Range(1, 2);
+        return value;
+    }
 
 }

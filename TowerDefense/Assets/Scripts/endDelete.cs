@@ -9,6 +9,8 @@ public class endDelete : MonoBehaviour
 {
     private Lives lives;
     private Spawner spawner;
+    private Monsters monsters;
+
     [SerializeField] private TextMeshPro livesText;
     private GameObject GameManager;
 
@@ -21,7 +23,7 @@ public class endDelete : MonoBehaviour
     {
         GameManager = GameObject.Find("GameManager");
         spawner = GameManager.GetComponent<Spawner>();
-        lives = GetComponent<Lives>();
+        lives = GameManager.GetComponent<Lives>();
     }
     private void OnTriggerEnter(Collider other)
     {
