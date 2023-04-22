@@ -1,9 +1,11 @@
 using JetBrains.Annotations;
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,10 +16,8 @@ public class Spawner : MonoBehaviour
     private GameObject[] enemies;//enemy array to spawn.
     [SerializeField]
     private Vector3 spawnLocation;
-    [SerializeField]
     private NavMeshAgent agent;
-    [SerializeField]
-    private Vector3 moveLocation;
+    [SerializeField] private Vector3[] moveLocations;
     [SerializeField]
     private float spawnRadius = 5f;
 
@@ -37,6 +37,16 @@ public class Spawner : MonoBehaviour
 
 
     private StockManager stock;
+
+    public Vector3[] MoveLocations
+    {
+        get { return moveLocations; }
+    }
+
+    public NavMeshAgent Agent
+    {
+        get; private set;
+    }
 
     public float RoundTimer
     {
@@ -69,8 +79,6 @@ public class Spawner : MonoBehaviour
         currentEnemies = enemiesToSpawn;
         StartCoroutine(roundSpawn());
         StartCoroutine(stockChangeTimer(1));
-
-
     }
     private void Update()
     {
@@ -102,6 +110,7 @@ public class Spawner : MonoBehaviour
         {
             RoundTimer = 0;
         }
+         
 
     }
     
@@ -120,7 +129,7 @@ public class Spawner : MonoBehaviour
             GameObject enemy = Instantiate(enemies[enemyIndex], randomPos, Quaternion.identity);//Instaniates current enemyIndex with the prefab array of enemies[] with the position of the Vector 3 randompos
 
             agent = enemy.GetComponent<NavMeshAgent>();//Gets the enemies navmesh agent component
-            agent.SetDestination(moveLocation);//sets the agents destination to the moveLocation set in the inspector.
+            agent.SetDestination(moveLocations[0]);//sets the agents destination to the moveLocation set in the inspector.
 
             
         }
@@ -151,4 +160,5 @@ public class Spawner : MonoBehaviour
         return value;
     }
 
+    
 }
