@@ -405,13 +405,13 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 5
-  m_Speed: 40
-  m_Acceleration: 50
+  m_Speed: 25
+  m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 60
-  m_StoppingDistance: 0
+  m_AngularSpeed: 5000
+  m_StoppingDistance: 25
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
+  m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 5
   m_BaseOffset: 0
@@ -431,7 +431,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 175
   _goldDrop: 155
-  _liveCost: 10
   gameManager: {fileID: 0}
   hpSlider: {fileID: 1356156174862005893}
 --- !u!1 &8058035584080863396

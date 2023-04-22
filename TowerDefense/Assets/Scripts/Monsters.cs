@@ -36,6 +36,7 @@ public class Monsters : MonoBehaviour
 
         Vector3 modelDirection = agent.destination - transform.position;
         modelDirection.y = 0;
+        modelDirection = new Vector3(modelDirection.z, modelDirection.y, -modelDirection.x);
         transform.LookAt(transform.position + modelDirection);//Fix model look towards it's direction
 
         if (agent.remainingDistance <= agent.stoppingDistance)//If the agent reaches it's MoveLocation[] array element POS then the MoveToOtherLocation() function gives the next location
