@@ -11517,6 +11517,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5357541561076580447, guid: d3d9b1b9dad3ad944a8bec60ff92c558,
         type: 3}
+      propertyPath: orcBoss
+      value: 
+      objectReference: {fileID: 4377179771800497880, guid: 6fc36354869b9de42a28b2765214e611,
+        type: 3}
+    - target: {fileID: 5357541561076580447, guid: d3d9b1b9dad3ad944a8bec60ff92c558,
+        type: 3}
       propertyPath: _roundTimer
       value: 1
       objectReference: {fileID: 0}
@@ -11528,7 +11534,7 @@ PrefabInstance:
     - target: {fileID: 5357541561076580447, guid: d3d9b1b9dad3ad944a8bec60ff92c558,
         type: 3}
       propertyPath: enemies.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5357541561076580447, guid: d3d9b1b9dad3ad944a8bec60ff92c558,
         type: 3}

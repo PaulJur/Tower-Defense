@@ -12,8 +12,9 @@ using UnityEngine.AI;
 public class Spawner : MonoBehaviour
 {
     #region variables
-    [SerializeField]
-    private GameObject[] enemies;//enemy array to spawn.
+
+    [SerializeField]  private GameObject[] enemies;//enemy array to spawn.
+    [SerializeField] private GameObject orcBoss;
     [SerializeField]
     private Vector3 spawnLocation;
     private NavMeshAgent agent;
@@ -120,6 +121,14 @@ public class Spawner : MonoBehaviour
         Vector3 randomPos = spawnLocation + Random.insideUnitSphere * spawnRadius;
 
         yield return new WaitForSeconds(RoundTimer);//waits for round delay amount to spawn enemies
+
+        if (currentRound == 10)//instaniates an Orc Boss on level 10
+        {
+            Instantiate(orcBoss, randomPos, Quaternion.identity);
+            agent = orcBoss.GetComponent<NavMeshAgent>();
+            agent.SetDestination(moveLocations[0]);
+            
+        }
 
         //Loops trough all the currentEnemies variable
         for (int i = 0; i < currentEnemies; i++)
