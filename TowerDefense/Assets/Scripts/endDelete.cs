@@ -30,7 +30,6 @@ public class endDelete : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
-            Debug.Log("You lost a Life!");
             lives.LoseLives(1);
             spawner.currentEnemies--;
             if (spawner.currentEnemies <= 0)

@@ -36,7 +36,7 @@ public class Monsters : MonoBehaviour
 
         Vector3 modelDirection = agent.destination - transform.position;//Calculates the difference between current model POS and destination. Gives a vector that points from model to destination
         modelDirection.y = 0;//Makes the modelDirection ignore the Y plane.
-        modelDirection = new Vector3(modelDirection.z, modelDirection.y, -modelDirection.x);
+        modelDirection = new Vector3(modelDirection.z, modelDirection.y, -modelDirection.x);//Rotates the model by 90 on the X plane so the model looks the right direction
         transform.LookAt(transform.position + modelDirection);//makes the model look at the direction it needs to look at. //Still need to look at this
 
         if (agent.remainingDistance <= agent.stoppingDistance)//If the agent reaches it's MoveLocation[] array element POS then the MoveToOtherLocation() function gives the next location

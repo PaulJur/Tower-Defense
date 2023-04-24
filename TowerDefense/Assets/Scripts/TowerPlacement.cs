@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.FilePathAttribute;
 
 public class TowerPlacement : MonoBehaviour
 {
@@ -35,20 +36,21 @@ public class TowerPlacement : MonoBehaviour
 
     private void Update()
     {
+
         if (TowerInstance !=null && beingPlaced)//if the towerinstance is not null, execute the code below
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, towerLayerMask))
                 {
                     TowerInstance.transform.position = hit.point;
 
+            if(!Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Unbuildable"))) { //If the raycast doesn't hit a layer that is called "Unbuildalbe", allows the player to build there.
                 if (Input.GetMouseButtonDown(0))
                 {
 
-                    Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;
+                    Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;//Gets the rotation of the blueprint prefab which allows the real tower to save it's rotation.
 
                     Instantiate(towerPrefab[towerIndex], TowerInstance.transform.position, towerRotation);//Instantiates the tower from the index on mouse position of the TowerInstance and gets the rotatin from the prefab.
 
@@ -60,8 +62,8 @@ public class TowerPlacement : MonoBehaviour
 
                 }
             }
+            }
             else { Debug.Log("Cannot place here"); }
-
 
             if (Input.GetMouseButtonDown(1))//Destroys the blueprint instance.
             {
@@ -94,8 +96,11 @@ public class TowerPlacement : MonoBehaviour
         }
         else//Places the tower 
         {
-            Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;
-            TowerInstance = Instantiate(TowerBlueprintPrefab[towerIndex], Input.mousePosition, towerRotation);
+            Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;//Gets the rotation of the blueprint prefab which allows the real tower to save it's rotation.
+            TowerInstance = Instantiate(TowerBlueprintPrefab[towerIndex], Input.mousePosition, towerRotation);//Instantiates the tower from the index on mouse position of the TowerInstance and gets the rotatin from the prefab.
+
+
+
             beingPlaced = true;
         }
 
