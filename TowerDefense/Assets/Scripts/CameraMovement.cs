@@ -1,6 +1,5 @@
 
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -18,18 +17,18 @@ public class CameraMovement : MonoBehaviour
     {
         Vector3 pos = transform.position;
 
-        if (Input.GetKey("w") || Input.mousePosition.y>=Screen.height-border){
+        if (Input.GetKey(KeyCode.W) || Input.mousePosition.y>=Screen.height-border){
             pos.z += panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("s") || Input.mousePosition.y <= border)
+        if (Input.GetKey(KeyCode.S) || Input.mousePosition.y <= border)
         {
             pos.z -= panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - border)
+        if (Input.GetKey(KeyCode.D) || Input.mousePosition.x >= Screen.width - border)
         {
             pos.x += panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("a") || Input.mousePosition.x <= border)
+        if (Input.GetKey(KeyCode.A) || Input.mousePosition.x <= border)
         {
             pos.x -= panSpeed * Time.deltaTime;
         }

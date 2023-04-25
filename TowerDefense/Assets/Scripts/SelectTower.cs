@@ -7,7 +7,6 @@ public class SelectTower : MonoBehaviour
 {
     [SerializeField] private GameObject SelectedTower;
     [SerializeField] private GameObject SellButton;
-    [SerializeField] private TextMeshProUGUI SellDescription;
     [SerializeField] private AudioSource TowerSoldSound;
     private Value towerValue;
     private Gold gold;
@@ -23,23 +22,17 @@ public class SelectTower : MonoBehaviour
 
     private void Update()
     {
-        
-        if (SelectedTower != null)
-        {
-            towerValue = SelectedTower.GetComponent<Value>();
-            SellDescription.text = $"Tower Sells for: {towerValue.TowerValue / 2}";
-        }
-        
         if (Input.GetMouseButtonDown(0) && !placement.BeingPlaced)//Checks if the mouse button is pressed and the player is currently not building
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
+            Ray ray2 = Camera.main.ScreenPointToRay(Input.mousePosition); 
 
             if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.CompareTag("Tower"))//If the raycast hits the tower and has the tag "Tower" it will make the current selected tower
             {
                 SelectedTower = hit.collider.gameObject;
                 SellButton.SetActive(true);
             }
-            else if (hit.collider != null && !hit.collider.CompareTag("Button"))//If anything else is selected it will make the selected tower empty.
+            else if (hit.collider != null)//If anything else is selected it will make the selected tower empty.
             {
                 SelectedTower = null;
                 SellButton.SetActive(false);
@@ -57,9 +50,7 @@ public class SelectTower : MonoBehaviour
             TowerSoldSound.Play();
             SelectedTower = null;
             gold.AddGold(towerValue.TowerValue / 2);
-            SellButton.SetActive(false); 
-            
+            SellButton.SetActive(false);
         }
     }
-
 }

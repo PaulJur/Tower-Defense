@@ -1,7 +1,6 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static UnityEditor.FilePathAttribute;
 
 public class TowerPlacement : MonoBehaviour
 {
