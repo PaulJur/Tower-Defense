@@ -27,6 +27,13 @@ public class turretTargeting : MonoBehaviour
 
     public GameObject closestEnemy;
 
+     public int TowerRange
+    {
+        get { return _towerRange; }
+        private set {_towerRange= value; }
+    }
+
+
     private void Start()
     {
         SFXManager = GameObject.Find("SFXManager");
@@ -36,7 +43,7 @@ public class turretTargeting : MonoBehaviour
     void Update()
     {
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, _towerRange);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, TowerRange);
 
         float closestDistance = float.MaxValue;
 
@@ -54,7 +61,7 @@ public class turretTargeting : MonoBehaviour
             }
         }
 
-        if (closestEnemy != null && Vector3.Distance(transform.position, closestEnemy.transform.position) > _towerRange) //A check if the enemy has left the towers sphere, if it did it, the closestenemy becomes null
+        if (closestEnemy != null && Vector3.Distance(transform.position, closestEnemy.transform.position) > TowerRange) //A check if the enemy has left the towers sphere, if it did it, the closestenemy becomes null
         {
             closestEnemy = null;
         }
@@ -91,7 +98,7 @@ public class turretTargeting : MonoBehaviour
     private void OnDrawGizmos()//Draws the sphere around the tower. The player cannot see this
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, _towerRange);
+        Gizmos.DrawWireSphere(transform.position, TowerRange);
     }
 
     

@@ -27,7 +27,6 @@ public class Spawner : MonoBehaviour
 
 
     private int _enemiesToSpawn = 2;
-    private int enemyIncrease;
     [SerializeField] private float _roundTimer;
 
     [SerializeField] private AudioSource roundCountDownSound;
@@ -111,7 +110,6 @@ public class Spawner : MonoBehaviour
         {
             RoundTimer = 0;
         }
-         
 
     }
     

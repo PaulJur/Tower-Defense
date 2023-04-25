@@ -9,6 +9,7 @@ public class SFX : MonoBehaviour
     [SerializeField] private AudioSource[] SFXSounds;
     [SerializeField] private TextMeshProUGUI SFXTextUI;
     [SerializeField] private AudioSource SFXTest;
+    [SerializeField] private AudioSource UISelectionSound;
 
 
     private void Start()
@@ -49,5 +50,11 @@ public class SFX : MonoBehaviour
     {
         SFXTest.volume= SFXSlider.value;
         SFXTest.Play();
+    }
+
+    public void PlaySelectionSound()
+    {
+        UISelectionSound.volume = SFXSlider.value;
+        UISelectionSound.Play();
     }
 }

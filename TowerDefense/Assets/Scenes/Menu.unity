@@ -483,6 +483,7 @@ GameObject:
   - component: {fileID: 133637879}
   - component: {fileID: 133637878}
   - component: {fileID: 133637877}
+  - component: {fileID: 133637880}
   m_Layer: 5
   m_Name: Next Page
   m_TagString: Untagged
@@ -617,6 +618,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133637875}
   m_CullTransparentMesh: 1
+--- !u!114 &133637880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133637875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &139004382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1219,7 @@ GameObject:
   - component: {fileID: 224667840}
   - component: {fileID: 224667839}
   - component: {fileID: 224667838}
+  - component: {fileID: 224667841}
   m_Layer: 5
   m_Name: Previous Page
   m_TagString: Untagged
@@ -1323,6 +1354,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224667836}
   m_CullTransparentMesh: 1
+--- !u!114 &224667841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224667836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &231364118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,6 +1683,7 @@ GameObject:
   - component: {fileID: 364229780}
   - component: {fileID: 364229779}
   - component: {fileID: 364229778}
+  - component: {fileID: 364229781}
   m_Layer: 5
   m_Name: Previous Page
   m_TagString: Untagged
@@ -1757,6 +1818,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364229776}
   m_CullTransparentMesh: 1
+--- !u!114 &364229781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364229776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &389765404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,6 +2071,7 @@ GameObject:
   - component: {fileID: 426636210}
   - component: {fileID: 426636209}
   - component: {fileID: 426636208}
+  - component: {fileID: 426636211}
   m_Layer: 5
   m_Name: Previous Page
   m_TagString: Untagged
@@ -2115,6 +2206,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426636206}
   m_CullTransparentMesh: 1
+--- !u!114 &426636211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426636206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &453976719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3208,6 +3328,7 @@ GameObject:
   - component: {fileID: 634987633}
   - component: {fileID: 634987632}
   - component: {fileID: 634987631}
+  - component: {fileID: 634987634}
   m_Layer: 5
   m_Name: Previous Page
   m_TagString: Untagged
@@ -3342,6 +3463,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634987629}
   m_CullTransparentMesh: 1
+--- !u!114 &634987634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634987629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &636069549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3951,6 +4101,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755987092}
   m_CullTransparentMesh: 1
+--- !u!1 &761009861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4139723918880695350, guid: 813f73df2acf18e42b08bc394d4598b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 706816070}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &761009866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761009861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &833648186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,6 +4148,7 @@ GameObject:
   - component: {fileID: 833648190}
   - component: {fileID: 833648189}
   - component: {fileID: 833648188}
+  - component: {fileID: 833648191}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -4109,6 +4295,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833648186}
   m_CullTransparentMesh: 1
+--- !u!114 &833648191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833648186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &938572533
 GameObject:
   m_ObjectHideFlags: 0
@@ -4557,6 +4772,7 @@ GameObject:
   - component: {fileID: 1127632029}
   - component: {fileID: 1127632028}
   - component: {fileID: 1127632027}
+  - component: {fileID: 1127632030}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -4679,6 +4895,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127632025}
   m_CullTransparentMesh: 1
+--- !u!114 &1127632030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127632025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1145030635
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,6 +5284,7 @@ GameObject:
   - component: {fileID: 1237559027}
   - component: {fileID: 1237559026}
   - component: {fileID: 1237559025}
+  - component: {fileID: 1237559028}
   m_Layer: 5
   m_Name: Next Page
   m_TagString: Untagged
@@ -5173,6 +5419,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237559023}
   m_CullTransparentMesh: 1
+--- !u!114 &1237559028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237559023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1242127722
 GameObject:
   m_ObjectHideFlags: 0
@@ -5784,6 +6059,7 @@ GameObject:
   - component: {fileID: 1363527091}
   - component: {fileID: 1363527090}
   - component: {fileID: 1363527089}
+  - component: {fileID: 1363527092}
   m_Layer: 5
   m_Name: Next Page
   m_TagString: Untagged
@@ -5918,6 +6194,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363527087}
   m_CullTransparentMesh: 1
+--- !u!114 &1363527092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363527087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1416191705 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4139723919184013389, guid: 813f73df2acf18e42b08bc394d4598b8,
@@ -6079,6 +6384,7 @@ GameObject:
   - component: {fileID: 1472459829}
   - component: {fileID: 1472459828}
   - component: {fileID: 1472459832}
+  - component: {fileID: 1472459833}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -6187,6 +6493,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371d72847350e744884b45ff01424e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1472459833
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472459827}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 25e2465f94a42c947a428e5e3b68f1f5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1502821035
 GameObject:
   m_ObjectHideFlags: 0
@@ -6199,6 +6601,7 @@ GameObject:
   - component: {fileID: 1502821039}
   - component: {fileID: 1502821038}
   - component: {fileID: 1502821037}
+  - component: {fileID: 1502821040}
   m_Layer: 5
   m_Name: Save
   m_TagString: Untagged
@@ -6321,6 +6724,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502821035}
   m_CullTransparentMesh: 1
+--- !u!114 &1502821040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502821035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1509873247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6345,9 +6777,24 @@ PrefabInstance:
       objectReference: {fileID: 1416191705}
     - target: {fileID: 891016282945843582, guid: bcf2b32b6558bcb41aca51a0044475fb,
         type: 3}
+      propertyPath: UISelectionSound
+      value: 
+      objectReference: {fileID: 1472459833}
+    - target: {fileID: 891016282945843582, guid: bcf2b32b6558bcb41aca51a0044475fb,
+        type: 3}
+      propertyPath: SFXSounds.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 891016282945843582, guid: bcf2b32b6558bcb41aca51a0044475fb,
+        type: 3}
       propertyPath: SFXSounds.Array.data[4]
       value: 
       objectReference: {fileID: 453976720}
+    - target: {fileID: 891016282945843582, guid: bcf2b32b6558bcb41aca51a0044475fb,
+        type: 3}
+      propertyPath: SFXSounds.Array.data[5]
+      value: 
+      objectReference: {fileID: 1472459833}
     - target: {fileID: 9152909616192239834, guid: bcf2b32b6558bcb41aca51a0044475fb,
         type: 3}
       propertyPath: m_Name
@@ -6866,6 +7313,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657990067}
   m_CullTransparentMesh: 1
+--- !u!1 &1691660135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9076487250734538170, guid: 6e16b6c21cd4dd64fb27d850d93d28fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 9076487251462606550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1705469136
 GameObject:
   m_ObjectHideFlags: 0
@@ -7391,6 +7844,35 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 9076487251462606550}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1806603118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691660135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1813614618
 GameObject:
   m_ObjectHideFlags: 0
@@ -7830,6 +8312,7 @@ GameObject:
   - component: {fileID: 1879750062}
   - component: {fileID: 1879750061}
   - component: {fileID: 1879750060}
+  - component: {fileID: 1879750063}
   m_Layer: 5
   m_Name: Next Page
   m_TagString: Untagged
@@ -7964,6 +8447,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879750058}
   m_CullTransparentMesh: 1
+--- !u!114 &1879750063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879750058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1901344232
 GameObject:
   m_ObjectHideFlags: 0
@@ -8121,6 +8633,7 @@ GameObject:
   - component: {fileID: 1904660387}
   - component: {fileID: 1904660386}
   - component: {fileID: 1904660385}
+  - component: {fileID: 1904660388}
   m_Layer: 5
   m_Name: Previous Page
   m_TagString: Untagged
@@ -8255,6 +8768,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904660383}
   m_CullTransparentMesh: 1
+--- !u!114 &1904660388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904660383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1910108150
 GameObject:
   m_ObjectHideFlags: 0
@@ -8835,6 +9377,7 @@ GameObject:
   - component: {fileID: 2049517576}
   - component: {fileID: 2049517575}
   - component: {fileID: 2049517574}
+  - component: {fileID: 2049517577}
   m_Layer: 5
   m_Name: Help
   m_TagString: Untagged
@@ -8981,6 +9524,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049517572}
   m_CullTransparentMesh: 1
+--- !u!114 &2049517577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049517572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!82 &2066994910 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 212712437, guid: edb10d35ef9d55f4baab57ca38e15094,
@@ -8999,6 +9571,7 @@ GameObject:
   - component: {fileID: 2074395782}
   - component: {fileID: 2074395781}
   - component: {fileID: 2074395780}
+  - component: {fileID: 2074395783}
   m_Layer: 5
   m_Name: Next Page
   m_TagString: Untagged
@@ -9133,6 +9706,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074395778}
   m_CullTransparentMesh: 1
+--- !u!114 &2074395783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074395778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1509873248}
+          m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+          m_MethodName: PlaySelectionSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2109257496
 GameObject:
   m_ObjectHideFlags: 0
@@ -9362,9 +9964,29 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9076487250734538168, guid: 6e16b6c21cd4dd64fb27d850d93d28fd,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076487250734538168, guid: 6e16b6c21cd4dd64fb27d850d93d28fd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076487250734538168, guid: 6e16b6c21cd4dd64fb27d850d93d28fd,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1472459832}
+    - target: {fileID: 9076487250734538168, guid: 6e16b6c21cd4dd64fb27d850d93d28fd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076487250734538168, guid: 6e16b6c21cd4dd64fb27d850d93d28fd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 9076487250734538170, guid: 6e16b6c21cd4dd64fb27d850d93d28fd,
         type: 3}
       propertyPath: m_Name

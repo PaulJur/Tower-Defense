@@ -8,6 +8,7 @@ public class SelectTower : MonoBehaviour
     [SerializeField] private GameObject SelectedTower;
     [SerializeField] private GameObject SellButton;
     [SerializeField] private TextMeshProUGUI SellDescription;
+    [SerializeField] private AudioSource TowerSoldSound;
     private Value towerValue;
     private Gold gold;
     private TowerPlacement placement;
@@ -53,6 +54,7 @@ public class SelectTower : MonoBehaviour
         if (SelectedTower != null)
         {
             Destroy(SelectedTower);
+            TowerSoldSound.Play();
             SelectedTower = null;
             gold.AddGold(towerValue.TowerValue / 2);
             SellButton.SetActive(false); 

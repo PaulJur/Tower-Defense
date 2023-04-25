@@ -12,6 +12,7 @@ public class TowerPlacement : MonoBehaviour
     [SerializeField]
     private GameObject[] towerPrefab;
     [SerializeField] private float[] TowerCosts;
+    [SerializeField] private AudioSource TowerPlacementSound;
 
 
     [SerializeField]
@@ -43,27 +44,28 @@ public class TowerPlacement : MonoBehaviour
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, towerLayerMask))
-                {
-                    TowerInstance.transform.position = hit.point;
+            {
+                TowerInstance.transform.position = hit.point;
 
-            if(!Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Unbuildable"))) { //If the raycast doesn't hit a layer that is called "Unbuildalbe", allows the player to build there.
-                if (Input.GetMouseButtonDown(0))
-                {
+                if (!Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Unbuildable")))
+                { //If the raycast doesn't hit a layer that is called "Unbuildalbe", allows the player to build there.
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        TowerPlacementSound.Play();
+                        Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;//Gets the rotation of the blueprint prefab which allows the real tower to save it's rotation.
 
-                    Quaternion towerRotation = TowerBlueprintPrefab[towerIndex].transform.rotation;//Gets the rotation of the blueprint prefab which allows the real tower to save it's rotation.
+                        Instantiate(towerPrefab[towerIndex], TowerInstance.transform.position, towerRotation);//Instantiates the tower from the index on mouse position of the TowerInstance and gets the rotatin from the prefab.
 
-                    Instantiate(towerPrefab[towerIndex], TowerInstance.transform.position, towerRotation);//Instantiates the tower from the index on mouse position of the TowerInstance and gets the rotatin from the prefab.
+                        Destroy(TowerInstance);
+                        gold.RemoveGold(TowerCosts[towerIndex]); //removes gold from set tower costs for set towers in the inspector;
+                        TowerInstance = null;
 
-                    Destroy(TowerInstance);
-                    gold.RemoveGold(TowerCosts[towerIndex]); //removes gold from set tower costs for set towers in the inspector;
-                    TowerInstance = null;
+                        beingPlaced = false;
 
-                    beingPlaced = false;
-
+                    }
                 }
             }
-            }
-            else { Debug.Log("Cannot place here"); }
+            else { Debug.Log("Cannot place here");}
 
             if (Input.GetMouseButtonDown(1))//Destroys the blueprint instance.
             {
