@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SelectTower : MonoBehaviour
 {
-    [SerializeField] private GameObject SelectedTower;
+    public GameObject SelectedTower;
     [SerializeField] private GameObject SellButton;
     [SerializeField] private AudioSource TowerSoldSound;
     private Value towerValue;
@@ -25,19 +25,13 @@ public class SelectTower : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !placement.BeingPlaced)//Checks if the mouse button is pressed and the player is currently not building
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
-            Ray ray2 = Camera.main.ScreenPointToRay(Input.mousePosition); 
+
 
             if (Physics.Raycast(ray, out RaycastHit hit) && hit.collider.CompareTag("Tower"))//If the raycast hits the tower and has the tag "Tower" it will make the current selected tower
             {
                 SelectedTower = hit.collider.gameObject;
                 SellButton.SetActive(true);
-            }
-            else if (hit.collider != null)//If anything else is selected it will make the selected tower empty.
-            {
-                SelectedTower = null;
-                SellButton.SetActive(false);
-            }
-
+            }      
         }
 
     }
@@ -46,11 +40,14 @@ public class SelectTower : MonoBehaviour
     {
         if (SelectedTower != null)
         {
+            towerValue = SelectedTower.GetComponent<Value>();
+            gold.AddGold(towerValue.TowerValue / 2);
+            SellButton.SetActive(false);
             Destroy(SelectedTower);
             TowerSoldSound.Play();
             SelectedTower = null;
-            gold.AddGold(towerValue.TowerValue / 2);
-            SellButton.SetActive(false);
+            
         }
+        else { Debug.Log("Nothing to sell"); }
     }
 }

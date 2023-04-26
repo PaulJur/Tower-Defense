@@ -46,8 +46,14 @@ public class TowerPlacement : MonoBehaviour
             {
                 TowerInstance.transform.position = hit.point;
 
-                if (!Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Unbuildable")))
-                { //If the raycast doesn't hit a layer that is called "Unbuildalbe", allows the player to build there.
+                if (!Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Unbuildable")))//If the raycast doesn't hit a layer that is called "Unbuildalbe", allows the player to build there.
+                { 
+                    Renderer[] renderers = TowerInstance.GetComponentsInChildren<Renderer>();//If the tower is on the "Unbuildable" layer, it will turn red signaling that it can't be built there.
+                    foreach (Renderer renderer in renderers)
+                    {
+                        renderer.material.color = Color.red;
+                    }
+
                     if (Input.GetMouseButtonDown(0))
                     {
                         TowerPlacementSound.Play();
@@ -61,6 +67,13 @@ public class TowerPlacement : MonoBehaviour
 
                         beingPlaced = false;
 
+                    }
+                }else
+                {
+                    Renderer[] renderers = TowerInstance.GetComponentsInChildren<Renderer>();//If the tower is not "Unbuildable" layer, it turns green signaling that it can be built there.
+                    foreach (Renderer renderer in renderers)
+                    {
+                        renderer.material.color = Color.green;
                     }
                 }
             }

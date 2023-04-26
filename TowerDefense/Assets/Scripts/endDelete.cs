@@ -12,6 +12,7 @@ public class endDelete : MonoBehaviour
     private Monsters monsters;
 
     [SerializeField] private TextMeshPro livesText;
+    [SerializeField] private AudioSource LostLifeSound;
     private GameObject GameManager;
 
     private void Update()
@@ -31,6 +32,7 @@ public class endDelete : MonoBehaviour
         {
             Destroy(other.gameObject);
             lives.LoseLives(1);
+            LostLifeSound.Play();
             spawner.currentEnemies--;
             if (spawner.currentEnemies <= 0)
             {

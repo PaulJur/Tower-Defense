@@ -19,6 +19,7 @@ public class uiText : MonoBehaviour
     [SerializeField] private TextMeshProUGUI GoldAmount;
 
 
+
     #region StockNames
     [SerializeField]
     private TextMeshProUGUI GafStockName;
@@ -51,7 +52,6 @@ public class uiText : MonoBehaviour
         stock = GetComponent<StockManager>();
         gold = GetComponent<Gold>();
         spawn = GetComponent<Spawner>();
-
     }
 
     void Update()
