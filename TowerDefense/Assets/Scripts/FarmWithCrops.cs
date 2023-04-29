@@ -9,6 +9,7 @@ public class FarmWithCrops : MonoBehaviour
 
     [SerializeField] private GameObject emptyFarmPrefab;
     [SerializeField] private GameObject gameManager;
+    [SerializeField] private AudioSource HarvestSound;
 
     private bool isHarvastable;
     private void Start()
@@ -25,6 +26,7 @@ public class FarmWithCrops : MonoBehaviour
         if (isHarvastable)
         {
             gold.AddGold(15);//gives gold to the player
+            HarvestSound.Play();
             Instantiate(emptyFarmPrefab,gameObject.transform.position, farmRotation);
             Destroy(gameObject);
         }
