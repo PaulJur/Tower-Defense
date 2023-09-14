@@ -25,6 +25,8 @@ As there is no certain way to build towers or investing, the player can come up 
 
 ![NVIDIA_Share_k04B7DftGo](https://github.com/PaulJur/Tower-Defense/assets/97526083/24ff5daa-ba57-48a4-8ad5-c05eff552fe8)
 
+Game was made in Unity Engine. Scripted in C#, models created in Blender. Made by Paulius Jurgelis
+
 
 
 
