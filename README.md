@@ -1,6 +1,6 @@
 # Tower-Defense Portfender TD
 
-As this was my latest game in Unity, Unity decided to announce they wanted to charge developers per download. They now retracted it but I will be no longer developing using Unity Technologies software.
+As this was my latest game in Unity, Unity decided to announce they wanted to charge developers per download. I will be no longer developing using Unity Technologies software.
 
 --University Bachelors Final work--
 
