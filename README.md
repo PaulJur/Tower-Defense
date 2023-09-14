@@ -16,6 +16,5 @@ The entry menu of the game includes a Help section where the player is introduce
 
 The entry menu also includes Options which allows the player to change their volume settings to music and sound effects in the game. It also includes a button to test the sound effects volume.
 
-![NVIDIA_Share_EvC1pE0o0S](https://github.com/PaulJur/Tower-Defense/assets/97526083/9e75a2ba-84f6-47dc-b0f6-f6eff23e94ad)
 
 
