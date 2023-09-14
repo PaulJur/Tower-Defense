@@ -18,12 +18,13 @@ The entry menu of the game includes a Help section where the player is introduce
 
 The entry menu also includes Options which allows the player to change their volume settings to music and sound effects in the game. It also includes a button to test the sound effects volume.
 
-
 ![NVIDIA_Share_EvC1pE0o0S](https://github.com/PaulJur/Tower-Defense/assets/97526083/c4de78f5-ea2e-4edf-8f87-9431c26e2c9f)
 
 The game starts off with a grace period of 30 seconds. The player can decide what they want to do. They can build a few towers, like a farm and a ballista tower or two fire towers. They can also decide to invest into 3 different stocks that have different volatilty each other with higher risk, higher reward.
+As there is no certain way to build towers or investing, the player can come up with their own strategy, build towers on the map in ways they choose fit.
 
-![NVIDIA_Share_k04B7DftGo](https://github.com/PaulJur/Tower-Defense/assets/97526083/1bc4509f-4696-4aa4-8d5f-83ddca20782f)
+![NVIDIA_Share_k04B7DftGo](https://github.com/PaulJur/Tower-Defense/assets/97526083/24ff5daa-ba57-48a4-8ad5-c05eff552fe8)
+
 
 
 
