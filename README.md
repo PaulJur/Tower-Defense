@@ -2,7 +2,7 @@
 
 --University Bachelors Final work--
 
-Game was made for my final work, for my university degree.
+Game was made for my final university work.
 
 Portfender TD is a randomized wave Tower defense game. Everytime you play, the game will play out differently, the player will need to adjust their strategy each time.
 
