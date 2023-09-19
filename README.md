@@ -8,24 +8,26 @@ Game was made for my final university work.
 
 Portfender TD is a randomized wave Tower defense game. Everytime you play, the game will play out differently, the player will need to adjust their strategy each time.
 
-![NVIDIA_Share_zLTbVBTDY7](https://github.com/PaulJur/Tower-Defense/assets/97526083/86ae8f4a-b8ab-4b03-ba88-4aca32fccc8a)
+![odz3BRx](https://github.com/PaulJur/Tower-Defense/assets/97526083/eafb2123-efee-4443-8719-d0eceb7ad513)
 
-![NVIDIA_Share_BbgoIV63FI](https://github.com/PaulJur/Tower-Defense/assets/97526083/39f9404c-7dab-4afa-acb7-ec2b9702d276)
+![ckO54Cz](https://github.com/PaulJur/Tower-Defense/assets/97526083/0babbd50-23b4-4b13-a1aa-452bd2811605)
 
-![NVIDIA_Share_v3FHvQvJt3](https://github.com/PaulJur/Tower-Defense/assets/97526083/470c5f5f-7e6b-470f-9fc6-8399d1d33c92)
+![2N3hp2p](https://github.com/PaulJur/Tower-Defense/assets/97526083/a0fb2967-faee-44d4-b371-69cb94555759)
 
 The entry menu of the game includes a Help section where the player is introduced to the games mechanics, monster and tower types.
 
-![NVIDIA_Share_EvC1pE0o0S](https://github.com/PaulJur/Tower-Defense/assets/97526083/8ab45d56-1820-4d41-9150-f63a8bfd8c47)
+![XfRJ0Fb](https://github.com/PaulJur/Tower-Defense/assets/97526083/11ca0c4b-65a0-4ed2-9c30-115c3f6e849c)
+
+![JKxGf54](https://github.com/PaulJur/Tower-Defense/assets/97526083/11c28a51-4525-471a-a5be-6beab344d329)
+
+![g8EWMko](https://github.com/PaulJur/Tower-Defense/assets/97526083/bacd8a46-d6aa-4f01-a111-7e93cc1c27f8)
 
 The entry menu also includes Options which allows the player to change their volume settings to music and sound effects in the game. It also includes a button to test the sound effects volume.
 
-![NVIDIA_Share_EvC1pE0o0S](https://github.com/PaulJur/Tower-Defense/assets/97526083/c4de78f5-ea2e-4edf-8f87-9431c26e2c9f)
+![LbwYeL0](https://github.com/PaulJur/Tower-Defense/assets/97526083/340bb851-ef05-4b33-b334-326de731fdb0)
 
 The game starts off with a grace period of 30 seconds. The player can decide what they want to do. They can build a few towers, like a farm and a ballista tower or two fire towers. They can also decide to invest into 3 different stocks that have different volatilty each other with higher risk, higher reward.
 As there is no certain way to build towers or investing, the player can come up with their own strategy, build towers on the map in ways they choose fit.
-
-![NVIDIA_Share_k04B7DftGo](https://github.com/PaulJur/Tower-Defense/assets/97526083/24ff5daa-ba57-48a4-8ad5-c05eff552fe8)
 
 Game was made in Unity Engine. Scripted in C#, models created in Blender. Made by Paulius Jurgelis
 
